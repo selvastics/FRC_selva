@@ -12,15 +12,43 @@
         #downloadPdf {
             font-weight: bold;
             color: steelblue;
+            margin: 20px 0;
+        }
+        .container {
+            width: 21cm;
+            min-height: 29.7cm;
+            padding: 1cm;
+            margin: 1cm auto;
+            border: 1px #d3d3d3 solid;
+            border-radius: 5px;
+            background: white;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+            line-height: 1.4;
         }
     </style>
 </head>
 <body>
-    <div>
+    <div class="container">
+        <h1>Chart with Download Link</h1>
         <canvas id="myChart"></canvas>
-    </div>
+        <button id="downloadPdf" type="button">Download PDF</button>
 
-    <button id="downloadPdf" type="button">Download PDF</button>
+        <p>Die BIG-5 Persönlichkeiten sind ein Modell der Persönlichkeitspsychologie, das die fünf Hauptdimensionen der Persönlichkeit beschreibt. Diese Dimensionen werden als Neurotizismus, Extraversion, Offenheit für Erfahrungen, Verträglichkeit und Gewissenhaftigkeit bezeichnet. Zusammengenommen bilden diese fünf Dimensionen ein umfassendes Bild der Persönlichkeit einer Person und können helfen, Ihr Verhalten und Ihre Interaktionen mit anderen besser zu verstehen. Es ist wichtig zu beachten, dass die BIG-5 Persönlichkeiten keine festen Kategorien sind und dass jeder Mensch einzigartig ist und seine eigenen individuellen Eigenschaften und Charakterzüge hat. Eine Beschreibung zu den einzelnen Facetten findet sich am Ende der Seite.</p>
+
+        <p>Vergleichsdaten liefert die Arbeit von Rammstedt und Kollegen (2018), welche die Persönlichkeitsausprägungen von 1.338 Personen überprüft haben.</p>
+        
+        <h2>Beschreibung der Facetten:</h2>
+        <ul>
+            <li><strong>Neurotizismus:</strong> Diese Dimension beschreibt die Tendenz, emotional instabil und anfällig für Stress zu sein. Menschen mit hohem Neurotizismus sind empfindlich, ängstlich und unruhig. Sie neigen dazu, sich Sorgen zu machen und haben ein hohes Bedürfnis nach Sicherheit.</li>
+            <li><strong>Extraversion:</strong> Diese Dimension beschreibt die Tendenz, aktiv und offen im sozialen Umgang zu sein. Menschen mit hoher Extraversion sind gesellig, energiegeladen und kontaktfreudig. Sie suchen die Gesellschaft anderer Menschen und genießen es, neue Leute kennenzulernen. Sie sind auch selbstbewusst und können ihre Meinungen offen äußern.</li>
+            <li><strong>Offenheit für Erfahrungen:</strong> Diese Dimension bezieht sich auf die Bereitschaft, neue Ideen und Erfahrungen zu akzeptieren und zu suchen. Menschen mit hoher Offenheit sind neugierig, kreativ und abenteuerlustig. Sie sind offen für neue Erfahrungen und haben eine große Bandbreite an Interessen. Sie sind auch offen für komplexe Ideen und können flexibel denken.</li>
+            <li><strong>Verträglichkeit:</strong> Diese Dimension bezieht sich auf die Fähigkeit, empathisch und kooperativ im sozialen Umgang zu sein. Menschen mit hoher Verträglichkeit sind freundlich, zuvorkommend und hilfsbereit. Sie sind auch geduldig und verstehen die Perspektiven anderer Menschen. Sie haben auch ein geringes Bedürfnis, andere zu kontrollieren oder zu manipulieren.</li>
+            <li><strong>Gewissenhaftigkeit:</strong> Diese Dimension bezieht sich auf die Fähigkeit, sorgfältig und verantwortungsbewusst zu handeln. Menschen mit hoher Gewissenhaftigkeit sind organisiert, zuverlässig und diszipliniert. Sie planen ihre Zeit und ihre Aktivitäten sorgfältig und setzen sich Ziele, die sie erreichen wollen. Sie sind auch selbstkontrolliert und können ihre Impulse unter Kontrolle halten.</li>
+        </ul>
+
+        <p>Nähere Informationen in "The Five-Factor Model of Personality: Theoretical Perspectives" von Paul T. Costa Jr. und Robert R. McCrae (1996), in der Zeitschrift Annual Review of Psychology.</p>
+    </div>
 
     <script>
         const { jsPDF } = window.jspdf;
@@ -29,7 +57,7 @@
         new Chart(ctx, {
             type: 'radar',
             data: {
-                labels: ['Neurotizismus', 'Extraversion', 'Offenheit', 'Vertraeglichkeit', 'Gewissenhaftigkeit'],
+                labels: ['Neurotizismus', 'Extraversion', 'Offenheit', 'Verträglichkeit', 'Gewissenhaftigkeit'],
                 datasets: [{
                     label: 'Individuelle Facettenausprägung',
                     data: [3, 4, 2, 3, 4], // Set values for individual facet expression
@@ -97,4 +125,3 @@
     </script>
 </body>
 </html>
-
