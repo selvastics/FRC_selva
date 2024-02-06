@@ -1,127 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chart with Download Link</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <title>Fragebogen zu Resilienz und Coping (FRC)</title>
     <style>
-        /* Make the button text bold */
-        #downloadPdf {
-            font-weight: bold;
-            color: steelblue;
-            margin: 20px 0;
+        body {
+            font-family: 'Meta Office', sans-serif;
+            color: #333;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
         }
         .container {
-            width: 21cm;
-            min-height: 29.7cm;
-            padding: 1cm;
-            margin: 1cm auto;
-            border: 1px #d3d3d3 solid;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .button {
+            display: inline-block;
+            color: #fff;
+            background-color: #3498db;
+            padding: 15px 25px;
+            text-decoration: none;
             border-radius: 5px;
-            background: white;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-            font-size: 14px;
-            line-height: 1.4;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Chart with Download Link</h1>
-        <canvas id="myChart"></canvas>
-        <button id="downloadPdf" type="button">Download PDF</button>
-
-        <p>Die BIG-5 Persönlichkeiten sind ein Modell der Persönlichkeitspsychologie, das die fünf Hauptdimensionen der Persönlichkeit beschreibt. Diese Dimensionen werden als Neurotizismus, Extraversion, Offenheit für Erfahrungen, Verträglichkeit und Gewissenhaftigkeit bezeichnet. Zusammengenommen bilden diese fünf Dimensionen ein umfassendes Bild der Persönlichkeit einer Person und können helfen, Ihr Verhalten und Ihre Interaktionen mit anderen besser zu verstehen. Es ist wichtig zu beachten, dass die BIG-5 Persönlichkeiten keine festen Kategorien sind und dass jeder Mensch einzigartig ist und seine eigenen individuellen Eigenschaften und Charakterzüge hat. Eine Beschreibung zu den einzelnen Facetten findet sich am Ende der Seite.</p>
-
-        <p>Vergleichsdaten liefert die Arbeit von Rammstedt und Kollegen (2018), welche die Persönlichkeitsausprägungen von 1.338 Personen überprüft haben.</p>
-        
-        <h2>Beschreibung der Facetten:</h2>
-        <ul>
-            <li><strong>Neurotizismus:</strong> Diese Dimension beschreibt die Tendenz, emotional instabil und anfällig für Stress zu sein. Menschen mit hohem Neurotizismus sind empfindlich, ängstlich und unruhig. Sie neigen dazu, sich Sorgen zu machen und haben ein hohes Bedürfnis nach Sicherheit.</li>
-            <li><strong>Extraversion:</strong> Diese Dimension beschreibt die Tendenz, aktiv und offen im sozialen Umgang zu sein. Menschen mit hoher Extraversion sind gesellig, energiegeladen und kontaktfreudig. Sie suchen die Gesellschaft anderer Menschen und genießen es, neue Leute kennenzulernen. Sie sind auch selbstbewusst und können ihre Meinungen offen äußern.</li>
-            <li><strong>Offenheit für Erfahrungen:</strong> Diese Dimension bezieht sich auf die Bereitschaft, neue Ideen und Erfahrungen zu akzeptieren und zu suchen. Menschen mit hoher Offenheit sind neugierig, kreativ und abenteuerlustig. Sie sind offen für neue Erfahrungen und haben eine große Bandbreite an Interessen. Sie sind auch offen für komplexe Ideen und können flexibel denken.</li>
-            <li><strong>Verträglichkeit:</strong> Diese Dimension bezieht sich auf die Fähigkeit, empathisch und kooperativ im sozialen Umgang zu sein. Menschen mit hoher Verträglichkeit sind freundlich, zuvorkommend und hilfsbereit. Sie sind auch geduldig und verstehen die Perspektiven anderer Menschen. Sie haben auch ein geringes Bedürfnis, andere zu kontrollieren oder zu manipulieren.</li>
-            <li><strong>Gewissenhaftigkeit:</strong> Diese Dimension bezieht sich auf die Fähigkeit, sorgfältig und verantwortungsbewusst zu handeln. Menschen mit hoher Gewissenhaftigkeit sind organisiert, zuverlässig und diszipliniert. Sie planen ihre Zeit und ihre Aktivitäten sorgfältig und setzen sich Ziele, die sie erreichen wollen. Sie sind auch selbstkontrolliert und können ihre Impulse unter Kontrolle halten.</li>
-        </ul>
-
-        <p>Nähere Informationen in "The Five-Factor Model of Personality: Theoretical Perspectives" von Paul T. Costa Jr. und Robert R. McCrae (1996), in der Zeitschrift Annual Review of Psychology.</p>
+        <h1>Willkommen beim Fragebogen zu Resilienz und Coping (FRC)</h1>
+        <p>Wir laden Sie herzlich ein, an unserer Studie teilzunehmen, die sich mit den wichtigen psychologischen Eigenschaften der Resilienz und des Copings befasst. Ihre Erfahrungen können uns helfen, ein tieferes Verständnis dieser Konzepte zu entwickeln und Werkzeuge zu schaffen, die Menschen in herausfordernden Zeiten unterstützen.</p>
+        <p>Unser Fragebogen wurde bereits von über 1000 Personen ausgefüllt, die dazu beigetragen haben, das Konstrukt von Resilienz und Coping zu messen.</p>
+        <p>Resilienz ist die Fähigkeit, schwierige Lebensereignisse zu bewältigen und sich von ihnen zu erholen. Coping umfasst die Gedanken und Verhaltensweisen, die Menschen anwenden, um mit belastenden Situationen des Alltags umzugehen.</p>
+        <p>Wir betrachten Resilienz und Coping als eng verbundene Konstrukte, die gemeinsam genutzt werden können, um die Reaktionen von Menschen auf Herausforderungen zu beschreiben.</p>
+        <p>Nach Abschluss der Umfrage erhalten Sie einen Token, mit dem Sie Ihre Ergebnisse mit einer live aktualisierten Normstichprobe vergleichen können. Sie haben auch die Möglichkeit, eine Zusammenfassung Ihrer Ergebnisse als PDF herunterzuladen und mit den Daten unserer Vorstudie zu vergleichen.</p>
+        <p>Ihre Teilnahme ist nicht nur ein Beitrag zur Wissenschaft, sondern bietet Ihnen auch die Möglichkeit, mehr über Ihre eigenen Resilienz- und Coping-Fähigkeiten zu erfahren. Klicken Sie auf den untenstehenden Button, um mit der Umfrage zu beginnen.</p>
+        <button onclick="window.location.href='https://example.com/survey'" style="font-weight: bold; color: steelblue;">Jetzt teilnehmen</button>    
+        <a href="#" class="button">Jetzt teilnehmen</a>
     </div>
-
-    <script>
-        const { jsPDF } = window.jspdf;
-        const ctx = document.getElementById('myChart');
-
-        new Chart(ctx, {
-            type: 'radar',
-            data: {
-                labels: ['Neurotizismus', 'Extraversion', 'Offenheit', 'Verträglichkeit', 'Gewissenhaftigkeit'],
-                datasets: [{
-                    label: 'Individuelle Facettenausprägung',
-                    data: [3, 4, 2, 3, 4], // Set values for individual facet expression
-                    fill: true,
-                    backgroundColor: ['rgba(153, 102, 255, 0.2)'],
-                    borderColor: ['rgba(153, 102, 255, 1)'],
-                    borderWidth: 1.5
-                }, {
-                    label: 'Normwerte',
-                    data: [2.74, 3.13, 3.27, 2.70, 2.70],
-                    fill: true,
-                    backgroundColor: ['rgba(75, 192, 192, 0.2)'],
-                    borderColor: ['rgba(75, 192, 192, 1)'],
-                    borderWidth: 1.5
-                }]
-            },
-            options: {
-                scales: {
-                    r: {
-                        min: 0,
-                        max: 5,
-                        pointLabels: {
-                            font: {
-                                size: 15
-                            }
-                        },
-                        angleLines: {
-                            display: false // Hide the lines connecting the center to the labels
-                        },
-                        ticks: {
-                            stepSize: 1, // Set the step size for labels
-                            callback: function(value, index, values) {
-                                // Skip labels for specific values (e.g., 0 and 5)
-                                if (value === 0) {
-                                    return '';
-                                }
-                                return value;
-                            }
-                        }
-                    }
-                }
-            }
-        });
-
-        document.getElementById('downloadPdf').addEventListener('click', function() {
-            html2canvas(ctx).then(canvas => {
-                const imgData = canvas.toDataURL('image/png', 1.0);
-                const pdf = new jsPDF('p', 'mm', 'a4');
-                const width = pdf.internal.pageSize.getWidth();
-                const imgWidth = width - 40;
-                const imgHeight = (canvas.height * imgWidth) / canvas.width;
-
-                // Add header
-                pdf.setFontSize(16);
-                pdf.text("RC Study: Individuelle Auswertung Teil 1", 105, 10, { align: 'center' });
-                pdf.setDrawColor(70, 130, 180); // Set color to steel blue
-                pdf.setLineWidth(0.5);
-                pdf.line(20, 12, 190, 12);
-
-                // Add text content and image to PDF
-                pdf.addImage(imgData, 'PNG', (width - imgWidth * 0.9) / 2, 20, imgWidth * 0.9, imgHeight * 0.72, 'NONE', 'FAST');
-                pdf.save("[RC_Study]Ihre Auswertungsergebnisse Teil 1.pdf");
-            });
-        });
-    </script>
 </body>
 </html>
