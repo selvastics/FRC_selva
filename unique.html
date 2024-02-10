@@ -279,7 +279,7 @@
         // This function redirects the user to the survey URL with the unique ID as a parameter
         function redirectToSurvey() {
             var uniqueId = generateUniqueId();
-            var surveyUrl = 'https://www.soscisurvey.de/RC-VP234763624-cs/?id=' + uniqueId;
+            var surveyUrl = 'https://www.soscisurvey.de/RC-IRT-cs/?q=CR01_M08/?id=' + uniqueId;
             window.location.href = surveyUrl;
         }
         
@@ -290,14 +290,46 @@
 
 
 // This code should be placed on your subpage where you want to display the ID
+// This code should be placed on your subpage where you want to display the values
 var urlParams = new URLSearchParams(window.location.search);
-var id = urlParams.get('id');
 
+// Get individual parameters
+var id = urlParams.get('id');
+var coping = urlParams.get('Coping');
+var resilienz = urlParams.get('Resilienz');
+var neurotizismus = urlParams.get('Neurotizismus');
+var extraversion = urlParams.get('Extraversion');
+var offenheit = urlParams.get('Offenheit');
+var vertraeglichkeit = urlParams.get('Vertraeglichkeit');
+var gewissenhaftigkeit = urlParams.get('Gewissenhaftigkeit');
+var achtsamkeit = urlParams.get('Achtsamkeit');
+var lebenszufriedenheit = urlParams.get('Lebenszufriedenheit');
+var prokastination = urlParams.get('Prokastination');
+var selbstwirksamkeit = urlParams.get('Selbstwirksamkeit');
+var politischeSelbstwirksamkeit = urlParams.get('PolitischeSelbstwirksamkeit');
+var berufsUndOrganisationsklima = urlParams.get('BerufsUndOrganisationsklima');
+
+// Check if ID parameter is found
 if (id !== null) {
     alert("The ID is: " + id);
 } else {
     alert("ID parameter not found in the URL.");
 }
+
+// Display other parameters
+alert("Coping: " + coping);
+alert("Resilienz: " + resilienz);
+alert("Neurotizismus: " + neurotizismus);
+alert("Extraversion: " + extraversion);
+alert("Offenheit: " + offenheit);
+alert("Vertraeglichkeit: " + vertraeglichkeit);
+alert("Gewissenhaftigkeit: " + gewissenhaftigkeit);
+alert("Achtsamkeit: " + achtsamkeit);
+alert("Lebenszufriedenheit: " + lebenszufriedenheit);
+alert("Prokastination: " + prokastination);
+alert("Selbstwirksamkeit: " + selbstwirksamkeit);
+alert("Politische Selbstwirksamkeit: " + politischeSelbstwirksamkeit);
+alert("Berufs- und Organisationsklima: " + berufsUndOrganisationsklima);
 
 
 
