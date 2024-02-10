@@ -23,33 +23,6 @@
 
 
 
-
-
-
-    <script>
-        // This function generates a unique ID
-        function generateUniqueId() {
-            return 'id_' + Math.random().toString(36).substr(2, 9);
-        }
-        
-        // This function redirects the user to the survey URL with the unique ID as a parameter
-        function redirectToSurvey() {
-            var uniqueId = generateUniqueId();
-            var surveyUrl = 'https://www.soscisurvey.de/RC-VP234763624-cs/?id=' + uniqueId;
-            window.location.href = surveyUrl;
-        }
-        
-        // Add an event listener to the survey link that triggers the redirectToSurvey function when clicked
-        document.getElementById('surveyLink').addEventListener('click', redirectToSurvey);
-    </script>
-
-
-
-
-
-
-
-
 </head>
 <body>
 	<section class="banner" role="banner">
@@ -295,6 +268,24 @@
        
         ga('create', 'UA-XXXX-X');
         ga('send', 'pageview');
+
+
+        // This function generates a unique ID
+        function generateUniqueId() {
+            return 'id_' + Math.random().toString(36).substr(2, 9);
+        }
+        
+        // This function redirects the user to the survey URL with the unique ID as a parameter
+        function redirectToSurvey() {
+            var uniqueId = generateUniqueId();
+            var surveyUrl = 'https://www.soscisurvey.de/RC-VP234763624-cs/?id=' + uniqueId;
+            window.location.href = surveyUrl;
+        }
+        
+        // Add an event listener to the survey link that triggers the redirectToSurvey function when clicked
+        document.getElementById('surveyLink').addEventListener('click', redirectToSurvey);
+
+
     </script>
 </body>
 </html>
