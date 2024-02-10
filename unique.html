@@ -287,10 +287,17 @@
         document.getElementById('surveyLink').addEventListener('click', redirectToSurvey);
 
 
-        // This code should be placed on your subpage where you want to display the ID
+
+
+// This code should be placed on your subpage where you want to display the ID
 var urlParams = new URLSearchParams(window.location.search);
 var id = urlParams.get('id');
-alert("The ID is: " + id);
+
+if (id !== null) {
+    alert("The ID is: " + id);
+} else {
+    alert("ID parameter not found in the URL.");
+}
 
 
 
