@@ -256,6 +256,7 @@ ul li {
       -webkit-transform: translateY(0) rotate(-45deg);
       transform: translateY(0) rotate(-45deg); }
 
+      
 /* ==========================================================================
 	$Banner
 ========================================================================== */
@@ -282,6 +283,25 @@ ul li {
     font-weight: 300;
     line-height: 1.5;
     margin-bottom: 80px; }
+
+
+    .bannerV {
+      background-color: #292c47; /* Set your desired background color */
+      min-height: 140px; }
+    
+    .banner-textV {
+      padding-top: 25%; }
+      .banner-textV h1 {
+        color: #fff;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 700;
+        text-transform: uppercase; }
+      .banner-textV p {
+        color: #fff;
+        font-size: 22px;
+        font-weight: 300;
+        line-height: 1.5;
+        margin-bottom: 80px; }
 
 /* ==========================================================================
 	$Features
