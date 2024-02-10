@@ -26,32 +26,22 @@
 
 
 
-        <script>
-            // Function to store token and case number in local storage
-            function storeTokenAndCaseNumber(token, caseNumber) {
-                localStorage.setItem('token', token);
-                localStorage.setItem('caseNumber', caseNumber);
-            }
-    
-            // Function to retrieve token and case number from local storage
-            function retrieveTokenAndCaseNumber() {
-                var token = localStorage.getItem('token');
-                var caseNumber = localStorage.getItem('caseNumber');
-                console.log('Token:', token, 'Case Number:', caseNumber);
-                // Process the token and case number as needed
-            }
-    
-            // Call this function when the page loads to check for token and case number in the URL
-            window.onload = function() {
-                var urlParams = new URLSearchParams(window.location.search);
-                var token = urlParams.get('tk');
-                var caseNumber = urlParams.get('num');
-                if (token && caseNumber) {
-                    storeTokenAndCaseNumber(token, caseNumber);
-                    retrieveTokenAndCaseNumber();
-                }
-            };
-        </script>
+    <script>
+        // This function generates a unique ID
+        function generateUniqueId() {
+            return 'id_' + Math.random().toString(36).substr(2, 9);
+        }
+        
+        // This function redirects the user to the survey URL with the unique ID as a parameter
+        function redirectToSurvey() {
+            var uniqueId = generateUniqueId();
+            var surveyUrl = 'https://www.soscisurvey.de/RC-VP234763624-cs/?id=' + uniqueId;
+            window.location.href = surveyUrl;
+        }
+        
+        // Add an event listener to the survey link that triggers the redirectToSurvey function when clicked
+        document.getElementById('surveyLink').addEventListener('click', redirectToSurvey);
+    </script>
 
 
 
@@ -259,7 +249,7 @@
             <div class="col-md-8 col-md-offset-2 text-center">
                 <h3>Sind Sie bereit mehr über sich und Ihre Widerstandsfähigkeit herauszufinden?</h3>
                 <p>Umfangreiches persönlichkeitsprofil direkt im Anschluss!</p>
-                <a href="https://www.soscisurvey.de/RC-VP234763624-cs/?r=[panelID]"  class="btn btn-large">Jetzt teilnehmen</a>
+                <a id="surveyLink" href="#" class="btn btn-large">Jetzt teilnehmen</a>
             </div>
         </div>
     </section><!-- download -->
