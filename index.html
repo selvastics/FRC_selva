@@ -20,6 +20,46 @@
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
+
+
+
+
+        <script>
+            // Function to store token and case number in local storage
+            function storeTokenAndCaseNumber(token, caseNumber) {
+                localStorage.setItem('token', token);
+                localStorage.setItem('caseNumber', caseNumber);
+            }
+    
+            // Function to retrieve token and case number from local storage
+            function retrieveTokenAndCaseNumber() {
+                var token = localStorage.getItem('token');
+                var caseNumber = localStorage.getItem('caseNumber');
+                console.log('Token:', token, 'Case Number:', caseNumber);
+                // Process the token and case number as needed
+            }
+    
+            // Call this function when the page loads to check for token and case number in the URL
+            window.onload = function() {
+                var urlParams = new URLSearchParams(window.location.search);
+                var token = urlParams.get('tk');
+                var caseNumber = urlParams.get('num');
+                if (token && caseNumber) {
+                    storeTokenAndCaseNumber(token, caseNumber);
+                    retrieveTokenAndCaseNumber();
+                }
+            };
+        </script>
+
+
+
+
+
+
+
+
 </head>
 <body>
 	<section class="banner" role="banner">
@@ -219,10 +259,12 @@
             <div class="col-md-8 col-md-offset-2 text-center">
                 <h3>Sind Sie bereit mehr über sich und Ihre Widerstandsfähigkeit herauszufinden?</h3>
                 <p>Umfangreiches persönlichkeitsprofil direkt im Anschluss!</p>
-                <a href="https://github.com/kamalcha/ActiveBox/archive/master.zip" class="btn btn-large">Jetzt teilnehmen</a>
+                <a href="https://www.soscisurvey.de/your_survey/?tk=%caseToken%&num=%caseNumber%"  class="btn btn-large">Jetzt teilnehmen</a>
             </div>
         </div>
     </section><!-- download -->
+
+
 
     <footer class="footer">
         <div class="footer-top">
