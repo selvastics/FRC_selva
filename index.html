@@ -280,7 +280,9 @@
         function redirectToSurvey() {
             var uniqueId = generateUniqueId();
             var surveyUrl = 'https://www.soscisurvey.de/rc-fragebogen_selvastics/?id=' + uniqueId;
-            window.location.href = surveyUrl;
+             //window.location.href = surveyUrl;
+            window.open(surveyUrl, '_blank'); // Öffnet die Umfrage in einem neuen Tab
+
         }
         
         // Add an event listener to the survey link that triggers the redirectToSurvey function when clicked
