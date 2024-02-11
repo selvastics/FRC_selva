@@ -33,7 +33,7 @@ jobs:
       - name: Push changes using GitHub API
         uses: actions/github-script@v5
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: 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
           script: |
             const fs = require('fs');
             const content = fs.readFileSync('page_visits.log', 'utf8');
