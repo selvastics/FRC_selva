@@ -116,6 +116,27 @@
 </style>
 
 
+
+<script>
+// Assuming the URL is https://example.com?Coping=4.444&Resilienz=3.606
+const urlParams = new URLSearchParams(window.location.search);
+
+const coping = Number(urlParams.get('Coping'));
+const resilienz = Number(urlParams.get('Resilienz'));
+// ... retrieve other parameters similarly
+
+// Store parameters in localStorage
+localStorage.setItem('coping', coping);
+localStorage.setItem('resilienz', resilienz);
+// ... store other parameters similarly
+
+
+const copingValue = Number(localStorage.getItem('coping'));
+const resilienzValue = Number(localStorage.getItem('resilienz'));
+</script>
+
+
+
     
 </head>
 <body>
@@ -911,27 +932,6 @@
     // Display the full URL in the specified location
     document.getElementById('url').innerText = fullURL;
 
-
-
-// Assuming the URL is https://example.com?Coping=4.444&Resilienz=3.606
-const urlParams = new URLSearchParams(window.location.search);
-
-const coping = urlParams.get('Coping');
-const resilienz = urlParams.get('Resilienz');
-
-
-
-// Retrieve values from localStorage
-const storedCoping = localStorage.getItem('coping');
-const storedResilienz = localStorage.getItem('resilienz');
-
-// Convert to numbers
-const copingValue = Number(storedCoping);
-const resilienzValue = Number(storedResilienz);
-
-
-document.getElementById('displayCoping').innerText = storedCoping;
-document.getElementById('displayResilienz').innerText = storedResilienz;
 
 
 
