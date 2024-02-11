@@ -168,39 +168,17 @@
     const storedBerufsUndOrganisationsklima = Number(localStorage.getItem('berufsUndOrganisationsklima'));
 
 
-    window.onload = function() {
-            // Get the URL
-            var url = window.location.href;
-            
-            // Extract the id parameter from the URL
-            var id = url.match(/id=([^&]+)/)[1];
-            
-            // Update the content of the h8 element with the extracted id
-            document.getElementById("storedId").textContent = id;
-        };
+    var id = urlParams.get('id');
 
 
+    localStorage.setItem('id', id);
 
-
-
-
-
-        window.onload = function() {
-    // Get the URL
-    var url = window.location.href;
-    
-    // Extract the id parameter from the URL
-    var params = new URLSearchParams(window.location.search);
-    var id = params.get('id');
-    
-    // Send the id and url to your server
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://your-server-url.com/save_entry", true);
-    xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.send(JSON.stringify({ id: id, url: url }));
-};
-
-
+    // Check if ID parameter is found
+    if (id !== null) {
+        alert("The ID is: " + id);
+    } else {
+        alert("ID parameter not found in the URL.");
+    }
 </script>
 
 
@@ -231,7 +209,6 @@
             <h2>Willkommen! Diese Seite ist speziell für Sie eingerichtet</h2>
             <h3>Ihre individueller Link lautet:</h3>
             <h8 style="color: darkred;" id="storedId"></h8>
-            <button onclick="copyURL()" id="copyButton" style="font-weight: bold; background-color: #3b3c3b; color: white; padding: 8px 15px; border: none; border-radius: 3px; cursor: pointer;">ID kopieren</button>
         </div>
         <div class="container">
             <h2 style="color: white;"></h2>
@@ -1009,7 +986,7 @@
 
 // Function to copy the URL to the clipboard and change button text
 function copyURL() {
-    var urlElement = document.getElementById('storedId');
+    var urlElement = document.getElementById('url');
     var range = document.createRange();
     range.selectNode(urlElement);
     window.getSelection().removeAllRanges();
@@ -1019,7 +996,7 @@ function copyURL() {
     var copyButton = document.getElementById('copyButton');
     copyButton.innerText = 'Kopiert!';
     setTimeout(function() {
-        copyButton.innerText = 'ID kopieren';
+        copyButton.innerText = 'Link kopieren';
     }, 3000); // Revert button text after 3 seconds (3000 milliseconds)
 }
 
