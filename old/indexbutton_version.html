@@ -21,71 +21,120 @@
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-    <style>
- /* Global styles */
-
-.gitbook-container {
-  max-height: 1900px;
-  overflow-y: auto;
-  margin: 0 auto;
-  width: 90%; /* Adjust as needed */
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.gitbook-toc {
-  flex: 1;
-  padding: 20px;
-}
-
-.gitbook-toc h2 {
-  font-size: 1.5em;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.gitbook-toc ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.gitbook-toc li {
-  margin-bottom: 10px;
-}
-
-.gitbook-toc a {
-  color: #666;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.gitbook-toc a:hover {
-  color: #000;
-}
-
-.gitbook-content {
-  flex: 3;
-  padding: 20px;
-}
-
-.gitbook-section {
-  margin-bottom: 40px;
-}
-
-.gitbook-section h1, .gitbook-section h2 {
-  color: #333;
-}
-
-.gitbook-section p {
-  color: #666;
-}
-
-/* Additional styles as needed */
-
-    </style>
 
 
+<style>
+        .gitbook-container {
+            display: flex;
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px; /* Add space below the GitBook */
+        }
+
+
+        .gitbook-toc {
+            width: 220%;
+            background-color: #f5f5f5;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            height: auto;
+            overflow-y: auto;
+        }
+
+        .gitbook-toc h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #333333;
+        }
+
+        .gitbook-toc ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .gitbook-toc li {
+            margin-bottom: 10px;
+        }
+
+
+
+        .gitbook-toc a {
+            color: #666666;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .gitbook-content {
+            width: auto%;
+            padding: auto;
+            overflow-y: auto;
+            max-height: calc(100vh); /* Adjust for top and bottom padding */
+        }
+
+
+
+
+
+
+        .gitbook-section {
+            margin-bottom: 40px;
+        }
+
+        .gitbook-section.hidden {
+            display: none;
+        }
+
+        .gitbook-section.active {
+            display: block;
+        }
+
+        .gitbook-section h2 {
+            font-size: 24px;
+            color: #333333;
+            margin-bottom: 10px;
+        }
+
+        .gitbook-section p {
+            font-size: 16px;
+            color: #666666;
+            line-height: 1.6;
+        }
+
+
+
+
+
+
+
+                   /* CSS styles for the navigation buttons */
+    .navigation-arrows {
+        text-align: center;
+        margin-top: 20px; /* Adjust margin as needed */
+    }
+
+    .navigation-arrows button {
+        background-color: #626b74; /* Blue color, adjust as needed */
+        color: #fff; /* White text */
+        border: none;
+        padding: 10px 20px; /* Adjust padding as needed */
+        margin: 0 40px; /* Adjust margin between buttons */
+        cursor: pointer;
+        border-radius: 50px;
+        transition: background-color 0.3s;
+    }
+
+    .navigation-arrows button:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+    } 
+</style>
+
+
+    
 </head>
 <body>
 	<section class="bannerV" role="bannerV"> 
@@ -101,17 +150,16 @@
                     </ul>
                 </nav>
                 <a href="#" class="nav-toggle">Menu<span></span></a>
-
+            </div>
+        </header>
     </section><!-- banner -->
     <section id="features" class="features section">
         <div class="text-center">
-            <h3>Über das RC-Projekt</h3>
+            <h2>Willkommen! Diese Seite ist speziell für Sie eingerichtet</h2>
+            <h3>Ihre ID lautet *id*</h3>
         </div>
-
-
-
         <div class="container">
-            <h2 style="color: white;">Willkommen! Diese Seite ist speziell für Sie eingerichtet</h2>
+            <h2 style="color: white;"></h2>
             <div class="gitbook-container">
                 <div class="gitbook-toc" id="table-of-contents">
                     <h2>Ihre Auswertung</h2>
@@ -120,23 +168,92 @@
                         <li><a href="#chapter2">Resilienz und Coping</a></li>
                         <li><a href="#chapter3">RC-fragebogen Subskalen</a></li>
                         <li><a href="#chapter4">BIG-5 Persönlichkeitsskalen</a></li>
-                        <li><a href="#chapter5">Validierungsskalen</a></li>
+                        <li><a href="#chapter5">Validierungsskalen</a></li> <!-- Corrected href attribute -->
                         <!-- Add more chapters as needed -->
                     </ul>
                 </div>
                 <div class="gitbook-content">
                     <div class="gitbook-section active" id="chapter1">
                         <h1>Einleitung</h1>
-                        <p>This is the introduction section of the GitBook-like content.</p>
+                        <p>Herzlich willkommen zu Ihrer persönlichen Auswertung! Sie haben an einer Studie teilgenommen und können diese nun einsehen. Bevor Sie sich in die Details Ihrer Ergebnisse vertiefen, möchten wir Ihnen einige wichtige Hinweise geben. 
+                            Es ist wichtig zu beachten, dass die Präsentation Ihrer Ergebnisse zum Teil auf einem Fragebogen basiert, der sich noch in der Entwicklung befindet, und die zugrunde liegenden Konstruktannahmen bisher nicht validiert wurden. Darüber hinaus sollten Sie Ihre Ergebnisse nicht direkt mit anderen Studien vergleichen, da unterschiedliche Methoden und Skalen verwendet wurden. Stattdessen sollten Sie Ihre Ergebnisse als Orientierungshilfe betrachten und nicht als absoluten Maßstab.
+                            Ein Vergleich ist über alle Personen, die bislang an unserer Studie teilgenommen haben möglich. Dabei stellen die farbigen Balken Ihre Werte da, während grau schraffierte Balken die Vergleichsstichprobe darstellen. Zur Interpretation sind Fehlerbalken  
+                            abgebildetet, die eine durchschnittliche Abweichungen vom Mittelwert representieren. Am Ende jeder Seite finden Sie eine kurze Erklärung zu jeweiligen Konstrukten.
+
+                            Es ist zusätzlich wichtig zu beachten, dass die Präsentation Ihrer Ergebnisse zum Teil auf einem Fragebogen basiert, der sich noch in der Entwicklung befindet, und die zugrunde liegenden Konstruktannahmen bisher nicht validiert wurden. Darüber hinaus sollten Sie Ihre Ergebnisse nicht direkt mit anderen Studien vergleichen, da unterschiedliche Methoden und Skalen verwendet wurden. Stattdessen sollten Sie Ihre Ergebnisse als Orientierungshilfe betrachten und nicht als absoluten Maßstab.
+                            Wenn Sie sich unsicher fühlen oder Fragen zu Ihren Ergebnissen haben, zögern Sie bitte nicht, uns zu kontaktieren.</p>
+                            <div class="navigation-arrows">
+                                <button class="prev-chapter-btn">Previous Chapter</button>
+                                <button class="next-chapter-btn">Next Chapter</button>
+                            </div>
+                            
                     </div>
                     <div class="gitbook-section" id="chapter2">
                         <h2>Resilienz und Coping</h2>
-                        <p>This is the getting started section of the GitBook-like content.</p>
+                        <p>Die Werte verteilen sich auf einer Skala von 1 (minimale Ausprägung) bis 7 (maximale Ausprägung). Die abgebildeten Fehlerbalken representieren durchschnittliche Abweichungen vom Mittelwert. Am Ende der Seite finden Sie eine kurze Erklärung zu den Konstrukten Resilienz und Coping.
+
+
+
+
+
+
+
+
+
+
+                        </p>
+                    </div>
+                    <div class="gitbook-section" id="chapter3">
+                        <h2>RC-fragebogen Subskalen</h2>
+                        <p>Die Werte verteilen sich auf einer Skala von 1 (minimale Ausprägung) bis 7 (maximale Ausprägung).  Am Ende der Seite finden Sie eine kurze Erklärung zu den Konstrukten Resilienz und Coping.
+
+
+
+
+
+
+
+
+
+
+                        </p>
+                    </div>
+
+                    <div class="gitbook-section" id="chapter4">
+                        <h2>BIG-5 Persönlichkeitsskalen</h2>
+                        <p>Die Werte verteilen sich auf einer Skala von 1 (minimale Ausprägung) bis 7 (maximale Ausprägung). 
+
+
+
+                            Die BIG-5 Persönlichkeiten sind ein Modell der Persönlichkeitspsychologie, das die fünf Hauptdimensionen der Persönlichkeit beschreibt. Diese Dimensionen werden als Neurotizismus, Extraversion, Offenheit für Erfahrungen, Verträglichkeit und Gewissenhaftigkeit bezeichnet.
+                            Zusammengenommen bilden diese fünf Dimensionen ein umfassendes Bild der Persönlichkeit einer Person und können helfen, Ihr Verhalten und Ihre Interaktionen mit anderen besser zu verstehen. Es ist wichtig zu beachten, dass die BIG-5 Persönlichkeiten keine festen Kategorien sind und dass jeder Mensch einzigartig ist und seine eigenen individuellen Eigenschaften und Charakterzüge hat. Eine Beschreibung zu den einzelnen Facetten findet sich am Ende der Seite.
+                                               
+
+
+
+
+                        </p>
+                    </div>
+
+                    <div class="gitbook-section" id="chapter5">
+                        <h2>Validierungsskalen</h2>
+                        <p>
+
+                            Die Ursprungswerte verteilen sich auf jeweils unterschiedlichen Skalen (z.B. 1-5 oder 1-7). Daher wurde eine Normalisierung durchgeführt, um Ihre Ergebnisse auf einer gemeinsamen Skala von 0 (minimale Ausprägung) bis 1 (maximale Ausprägung) zu vergleichen. Die abgebildeten Fehlerbalken representieren durchschnittliche Abweichungen vom Mittelwert. Am Ende der Seite finden Sie eine kurze Erklärung zu den Konstrukten.
+
+
+
+
+                            
+
+
+                        </p>
                     </div>
                     <!-- Add more chapters and sections as needed -->
-                </div>
-            </div>
-        </div>
+                </div> <!-- Schließt .gitbook-content -->
+            </div> <!-- Schließt .gitbook-container -->
+        </div> <!-- Schließt .container -->
+    </section> <!-- Schließt .features section -->
 
 
 
@@ -145,64 +262,6 @@
 
 
 
-
-
-
-    </section><!-- banner -->
-
-
-
-
-
-
-        <div class="container">
-           <div class="row">
-                <div class="col-md-4 col-sm-6 feature text-center">
-                    <span class="icon icon-tools"></span>
-                    <div class="feature-content">
-                        <h5>Was wir machen</h5>
-                        <p>Wir befassen uns mit den psychologischen Eigenschaften von Resilienz und Coping und stellen in diesen Rahmen ein wissenschaftliches Messinstrument zu freien Verwendung bereit.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 feature text-center">
-                    <span class="icon icon-desktop"></span>
-                    <div class="feature-content">
-                        <h5>Beschreibung </h5>
-                        <p>Resilienz ist die Fähigkeit, schwierige Lebensereignisse zu bewältigen und sich von ihnen zu erholen. Coping umfasst die Gedanken und Verhaltensweisen, die Menschen anwenden, um mit belastenden Situationen des Alltags umzugehen..</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 feature text-center">
-                    <span class="icon icon-lightbulb"></span>
-                    <div class="feature-content">
-                        <h5>Unser Ansatz</h5>
-                        <p>Wir betrachten Resilienz und Coping als eng verbundene Konstrukte, die gemeinsam genutzt werden können, um die Reaktionen von Menschen auf Herausforderungen zu beschreiben. Unser Fragebogen ist mit mehreren Skalen ausgestattet, um diese Eigenschaften umfassend zu erfassen.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 feature text-center">
-                    <span class="icon icon-genius"></span>
-                    <div class="feature-content">
-                        <h5>Ihr Vorteil</h5>
-                        <p>Nach Abschluss der Umfrage erhalten Sie einen Token, mit dem Sie Ihre Ergebnisse mit einer live aktualisierten Normstichprobe vergleichen können.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 feature text-center">
-                    <span class="icon icon-briefcase"></span>
-                    <div class="feature-content">
-                        <h5>Beteiligen Sie sich</h5>
-                        <p>Ihre Teilnahme ist nicht nur ein Beitrag zur Wissenschaft, sondern bietet Ihnen auch die Möglichkeit, mehr über Ihre eigenen Resilienz- und Coping-Fähigkeiten zu erfahren. </p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 feature text-center">
-                    <span class="icon icon-download"></span>
-                    <div class="feature-content">
-                        <h5>Speicherung der Daten</h5>
-                        <p>Am Ende der Befragung erhalten Sie Zugriff auf einen spezifischen Link, der nicht Ihrer Person zuzuordnen werden kann. Dieser Link bleibt für Sie
-                            aktiv und Sie können beliebig oft Ihre Daten mit den aktualiserten Normierungswerten vergleichen.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!-- features -->
 
 
     <section id="teams" class="section teams">
@@ -388,6 +447,56 @@
         
         // Add an event listener to the survey link that triggers the redirectToSurvey function when clicked
         document.getElementById('surveyLink').addEventListener('click', redirectToSurvey);
+
+
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+        const chapterLinks = document.querySelectorAll('.gitbook-toc a[href^="#"]');
+        const prevChapterBtn = document.querySelector('.prev-chapter-btn');
+        const nextChapterBtn = document.querySelector('.next-chapter-btn');
+        const chapters = document.querySelectorAll('.gitbook-section');
+
+        chapterLinks.forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                const targetChapterId = this.getAttribute('href').substring(1);
+                const targetChapter = document.getElementById(targetChapterId);
+                if (targetChapter) {
+                    targetChapter.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        prevChapterBtn.addEventListener('click', function (event) {
+            event.preventDefault();
+            navigateToChapter('prev');
+        });
+
+        nextChapterBtn.addEventListener('click', function (event) {
+            event.preventDefault();
+            navigateToChapter('next');
+        });
+
+        function navigateToChapter(direction) {
+            const activeChapterIndex = Array.from(chapters).findIndex(chapter => chapter.classList.contains('active'));
+            let targetChapterIndex;
+
+            if (direction === 'prev') {
+                targetChapterIndex = Math.max(activeChapterIndex - 1, 0);
+            } else if (direction === 'next') {
+                targetChapterIndex = Math.min(activeChapterIndex + 1, chapters.length - 1);
+            }
+
+            const targetChapter = chapters[targetChapterIndex];
+            if (targetChapter) {
+                targetChapter.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    });
+
+
+
 
 
     </script>
