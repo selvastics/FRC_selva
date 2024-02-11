@@ -30,6 +30,7 @@ jobs:
           git commit -m "Log page visit"
           git push origin git-pages
 
+
       - name: Push changes using GitHub API
         uses: actions/github-script@v5
         with:
