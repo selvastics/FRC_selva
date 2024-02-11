@@ -29,4 +29,12 @@ jobs:
           git config --global user.email 'actions@github.com'
           git add page_visits.log
           git commit -m "Log page visit"
-          git push origin main
+          git push origin main  # This will trigger the error
+
+      - name: Push changes using GitHub API
+        run: |
+          curl -X POST \
+          -H "Authorization: token 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" \
+          -H "Accept: application/vnd.github.v3+json" \
+          https://api.github.com/repos/selvastics/FRC_selva/git/commits \
+          -d '{"message": "Log page visit", "content": "'$(base64 -w 0 page_visits.log)'", "branch": "main"}'
