@@ -899,8 +899,37 @@
 
 
 
+
+
+
+    // Get the current full URL with parameters
+    var fullURL = window.location.href;
+
+    // Save the full URL to localStorage
+    localStorage.setItem('fullURL', fullURL);
+
+    // Display the full URL in the specified location
+    document.getElementById('url').innerText = fullURL;
+
+// Get individual parameters
+var id = urlParams.get('id');
+var coping = urlParams.get('Coping');
+var resilienz = urlParams.get('Resilienz');
+var neurotizismus = urlParams.get('Neurotizismus');
+var extraversion = urlParams.get('Extraversion');
+var offenheit = urlParams.get('Offenheit');
+var vertraeglichkeit = urlParams.get('Vertraeglichkeit');
+var gewissenhaftigkeit = urlParams.get('Gewissenhaftigkeit');
+var achtsamkeit = urlParams.get('Achtsamkeit');
+var lebenszufriedenheit = urlParams.get('Lebenszufriedenheit');
+var prokastination = urlParams.get('Prokastination');
+var selbstwirksamkeit = urlParams.get('Selbstwirksamkeit');
+var politischeSelbstwirksamkeit = urlParams.get('PolitischeSelbstwirksamkeit');
+var berufsUndOrganisationsklima = urlParams.get('BerufsUndOrganisationsklima');
+
+
     // Set values to localStorage
-localStorage.setItem('coping', coping);
+    localStorage.setItem('coping', coping);
 localStorage.setItem('resilienz', resilienz);
 
 // Log the values after setting them
