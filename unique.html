@@ -137,6 +137,7 @@
     const politischeSelbstwirksamkeit = Number(urlParams.get('PolitischeSelbstwirksamkeit'));
     const berufsUndOrganisationsklima = Number(urlParams.get('BerufsUndOrganisationsklima'));
 
+
     // Store parameters in localStorage
     localStorage.setItem('id', id);
     localStorage.setItem('coping', coping);
@@ -168,6 +169,11 @@
     const storedSelbstwirksamkeit = Number(localStorage.getItem('selbstwirksamkeit'));
     const storedPolitischeSelbstwirksamkeit = Number(localStorage.getItem('politischeSelbstwirksamkeit'));
     const storedBerufsUndOrganisationsklima = Number(localStorage.getItem('berufsUndOrganisationsklima'));
+
+
+// Update the HTML element with the stored ID
+document.getElementById('storedId').textContent = storedId;
+
 </script>
 
 
