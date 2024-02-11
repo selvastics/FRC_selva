@@ -169,26 +169,30 @@
 
 
     window.onload = function() {
+            // Get the URL
+            var url = window.location.href;
+            
+            // Extract the id parameter from the URL
+            var id = url.match(/id=([^&]+)/)[1];
+            
+            // Update the content of the h8 element with the extracted id
+            document.getElementById("storedId").textContent = id;
+        };
+
+
+        window.onload = function() {
     // Get the URL
     var url = window.location.href;
     
-    // Extract the id parameter from the URL using regex
-    var idRegex = /id=([^&]+)/;
-    var idMatch = url.match(idRegex);
-    var id = idMatch ? idMatch[1] : null; // Check if the id parameter exists
-    
-    // Update the content of the h8 element with the extracted id
-    document.getElementById("storedId").textContent = id;
-    
     // Extract the id parameter from the URL using URLSearchParams
     var params = new URLSearchParams(window.location.search);
-    var idFromParams = params.get('id');
+    var id = params.get('id');
     
     // Send the id and url to your server
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://your-server-url.com/save_entry", true);
+    xhr.open("POST", "https://github.com/selvastics/FRC_selva/tree/git-pages/server", true);
     xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.send(JSON.stringify({ id: idFromParams, url: url }));
+    xhr.send(JSON.stringify({ id: id, url: url }));
 };
 
 
