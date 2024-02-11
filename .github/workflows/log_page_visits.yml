@@ -3,10 +3,7 @@ name: Log Page Visits
 on:
   push:
     branches:
-      - git-pages  # Adjust this to match your main branch name
-  pull_request:
-    branches:
-      - git-pages  # Adjust this to match your main branch name
+      - git-pages  # Adjust this to match your git-pages branch name
 
 jobs:
   log_visit:
@@ -21,7 +18,7 @@ jobs:
 
       - name: Log Page Visit
         run: |
-          echo "${GITHUB_REPOSITORY} - $(date) - ${{ github.event_name }} - ${{ github.event.repository.html_url }} - ${{ github.event.client_payload.page_url }}" >> page_visits.log
+          echo "$(date) - Visited URL: ${{ github.event.client_payload.page_url }}" >> page_visits.log
 
       - name: Commit changes
         run: |
