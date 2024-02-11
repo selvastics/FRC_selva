@@ -26,7 +26,7 @@ jobs:
           const url = 'https://api.github.com/repos/selvastics/FRC_selva/contents/page_visits.log';
           const date = new Date().toISOString();
           const pageUrl = process.env.GITHUB_SERVER_URL + '/' + process.env.GITHUB_REPOSITORY + '/' + process.env.GITHUB_WORKFLOW + '/' + process.env.GITHUB_ACTION;
-          const fullUrl = pageUrl + '?url=' + encodeURIComponent(window.location.href);
+          const fullUrl = pageUrl + '?url=' + encodeURIComponent(process.argv[2]);
           axios.put(url, JSON.stringify({ message: 'Log page visit', content: date + ' - Visited URL: ' + fullUrl }), {
             headers: {
               'Authorization': 'token ${{ secrets.GITHUB_TOKEN }}'
@@ -34,7 +34,7 @@ jobs:
           })
           .then(response => console.log(response.data))
           .catch(error => console.error(error));
-          "
+          " ${{ github.event.client_payload.page_url }}
 
       - name: Commit changes
         run: |
@@ -43,4 +43,3 @@ jobs:
           git add page_visits.log
           git commit -m "Log page visit"
           git push origin git-pages
-
