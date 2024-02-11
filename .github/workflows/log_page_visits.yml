@@ -1,0 +1,28 @@
+name: Log Page Visits
+
+on:
+  push:
+    branches:
+
+      - git-pages  # Adjust this to match your main branch name
+jobs:
+  log_visit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Create log file if not exists
+        run: touch page_visits.log
+
+      - name: Log Page Visit
+        run: |
+          echo "${GITHUB_REPOSITORY} - $(date) - ${{ github.event_name }} - ${{ github.event.repository.html_url }} - ${{ github.event.client_payload.page_url }}" >> page_visits.log
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'selvastics'
+          git config --global user.email 'cselva@uni-muenster.de'
+          git add page_visits.log
+          git commit -m "Log page visit"
+          git push
