@@ -43,3 +43,4 @@ jobs:
           git add page_visits.log
           git commit -m "Log page visit"
           git push origin git-pages
+
