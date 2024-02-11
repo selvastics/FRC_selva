@@ -5,12 +5,13 @@ on:
     branches:
 
       - git-pages  # Adjust this to match your main branch name
+
 jobs:
   log_visit:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Create log file if not exists
         run: touch page_visits.log
