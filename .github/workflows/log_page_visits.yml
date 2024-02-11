@@ -31,9 +31,18 @@ jobs:
           git push origin git-pages
 
       - name: Push changes using GitHub API
-        run: |
-          curl -X POST \
-          -H "Authorization: token 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" \
-          -H "Accept: application/vnd.github.v3+json" \
-          https://api.github.com/repos/selvastics/FRC_selva/git/commits \
-          -d '{"message": "Log page visit", "content": "'$(base64 -w 0 page_visits.log)'", "branch": "git-pages"}'
+        uses: actions/github-script@v5
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const content = fs.readFileSync('page_visits.log', 'utf8');
+            const response = await github.repos.createOrUpdateFileContents({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              path: 'page_visits.log',
+              message: 'Log page visit',
+              content: Buffer.from(content).toString('base64'),
+              branch: 'git-pages'
+            });
+            console.log(response);
