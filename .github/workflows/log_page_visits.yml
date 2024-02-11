@@ -3,20 +3,21 @@ name: Log Page Visits
 on:
   push:
     branches:
-      - git-pages  # Adjust this to match your branch name
+      - git-pages  # Adjust this to match your main branch name
+  pull_request:
+    branches:
+      - git-pages  # Adjust this to match your main branch name
 
 jobs:
   log_visit:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
-        with:
-          ref: ${{ github.event.ref }}
+        uses: actions/checkout@v2
 
       - name: Create log file if not exists
         run: |
-          touch page_visits.log
+          touch page_visits.log || true
 
       - name: Log Page Visit
         run: |
@@ -29,20 +30,3 @@ jobs:
           git add page_visits.log
           git commit -m "Log page visit"
           git push origin git-pages
-
-      - name: Push changes using GitHub API
-        uses: actions/github-script@v5
-        with:
-          github-token: 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
-          script: |
-            const fs = require('fs');
-            const content = fs.readFileSync('page_visits.log', 'utf8');
-            const response = await github.repos.createOrUpdateFileContents({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              path: 'page_visits.log',
-              message: 'Log page visit',
-              content: Buffer.from(content).toString('base64'),
-              branch: 'git-pages'
-            });
-            console.log(response);
