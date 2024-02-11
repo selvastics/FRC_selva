@@ -3,7 +3,7 @@ name: Log Page Visits
 on:
   push:
     branches:
-      - git-pages  # Adjust this to match your main branch name
+      - git-pages  # Adjust this to match your branch name
 
 jobs:
   log_visit:
@@ -28,7 +28,7 @@ jobs:
           git config --global user.email 'cselva@uni-muenster.de'
           git add page_visits.log
           git commit -m "Log page visit"
-          git push origin git-pages  # This will trigger the error
+          git push origin git-pages
 
       - name: Push changes using GitHub API
         run: |
