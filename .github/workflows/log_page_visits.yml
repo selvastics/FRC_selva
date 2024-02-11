@@ -12,18 +12,21 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.ref }}
 
       - name: Create log file if not exists
-        run: touch page_visits.log
+        run: |
+          touch page_visits.log
 
       - name: Log Page Visit
         run: |
           echo "${GITHUB_REPOSITORY} - $(date) - ${{ github.event_name }} - ${{ github.event.repository.html_url }} - ${{ github.event.client_payload.page_url }}" >> page_visits.log
 
-      - name: Commit and push changes
+      - name: Commit changes
         run: |
-          git config --global user.name 'selvastics'
-          git config --global user.email 'cselva@uni-muenster.de'
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@github.com'
           git add page_visits.log
           git commit -m "Log page visit"
-          git push
+          git push origin main
