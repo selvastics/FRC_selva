@@ -258,7 +258,7 @@
                                     datasets: [
                                         {
                                             // Real data
-                                            data: [coping, resilienz], // Replace placeholders with stored values
+                                            data: [copingValue, resilienzValue],
                                             fill: true,
                                             backgroundColor: [
                                                 'rgba(153, 102, 255, 0.2)'
@@ -920,12 +920,15 @@ const coping = urlParams.get('Coping');
 const resilienz = urlParams.get('Resilienz');
 
 
-localStorage.setItem('coping', coping);
-localStorage.setItem('resilienz', resilienz);
 
-
+// Retrieve values from localStorage
 const storedCoping = localStorage.getItem('coping');
 const storedResilienz = localStorage.getItem('resilienz');
+
+// Convert to numbers
+const copingValue = Number(storedCoping);
+const resilienzValue = Number(storedResilienz);
+
 
 document.getElementById('displayCoping').innerText = storedCoping;
 document.getElementById('displayResilienz').innerText = storedResilienz;
