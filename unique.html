@@ -117,23 +117,60 @@
 
 
 
+
 <script>
-// Assuming the URL is https://example.com?Coping=4.444&Resilienz=3.606
-const urlParams = new URLSearchParams(window.location.search);
+    // Assuming the URL is https://example.com?Coping=4.444&Resilienz=3.606
+    const urlParams = new URLSearchParams(window.location.search);
 
-const coping = Number(urlParams.get('Coping'));
-const resilienz = Number(urlParams.get('Resilienz'));
-// ... retrieve other parameters similarly
+    const id = urlParams.get('id');
+    const coping = Number(urlParams.get('Coping'));
+    const resilienz = Number(urlParams.get('Resilienz'));
+    const neurotizismus = Number(urlParams.get('Neurotizismus'));
+    const extraversion = Number(urlParams.get('Extraversion'));
+    const offenheit = Number(urlParams.get('Offenheit'));
+    const vertraeglichkeit = Number(urlParams.get('Vertraeglichkeit'));
+    const gewissenhaftigkeit = Number(urlParams.get('Gewissenhaftigkeit'));
+    const achtsamkeit = Number(urlParams.get('Achtsamkeit'));
+    const lebenszufriedenheit = Number(urlParams.get('Lebenszufriedenheit'));
+    const prokastination = Number(urlParams.get('Prokastination'));
+    const selbstwirksamkeit = Number(urlParams.get('Selbstwirksamkeit'));
+    const politischeSelbstwirksamkeit = Number(urlParams.get('PolitischeSelbstwirksamkeit'));
+    const berufsUndOrganisationsklima = Number(urlParams.get('BerufsUndOrganisationsklima'));
 
-// Store parameters in localStorage
-localStorage.setItem('coping', coping);
-localStorage.setItem('resilienz', resilienz);
-// ... store other parameters similarly
+    // Store parameters in localStorage
+    localStorage.setItem('id', id);
+    localStorage.setItem('coping', coping);
+    localStorage.setItem('resilienz', resilienz);
+    localStorage.setItem('neurotizismus', neurotizismus);
+    localStorage.setItem('extraversion', extraversion);
+    localStorage.setItem('offenheit', offenheit);
+    localStorage.setItem('vertraeglichkeit', vertraeglichkeit);
+    localStorage.setItem('gewissenhaftigkeit', gewissenhaftigkeit);
+    localStorage.setItem('achtsamkeit', achtsamkeit);
+    localStorage.setItem('lebenszufriedenheit', lebenszufriedenheit);
+    localStorage.setItem('prokastination', prokastination);
+    localStorage.setItem('selbstwirksamkeit', selbstwirksamkeit);
+    localStorage.setItem('politischeSelbstwirksamkeit', politischeSelbstwirksamkeit);
+    localStorage.setItem('berufsUndOrganisationsklima', berufsUndOrganisationsklima);
 
-
-const copingValue = Number(localStorage.getItem('coping'));
-const resilienzValue = Number(localStorage.getItem('resilienz'));
+    // Retrieve parameters from localStorage
+    const storedId = localStorage.getItem('id');
+    const copingValue = Number(localStorage.getItem('coping'));
+    const resilienzValue = Number(localStorage.getItem('resilienz'));
+    const storedNeurotizismus = Number(localStorage.getItem('neurotizismus'));
+    const storedExtraversion = Number(localStorage.getItem('extraversion'));
+    const storedOffenheit = Number(localStorage.getItem('offenheit'));
+    const storedVertraeglichkeit = Number(localStorage.getItem('vertraeglichkeit'));
+    const storedGewissenhaftigkeit = Number(localStorage.getItem('gewissenhaftigkeit'));
+    const storedAchtsamkeit = Number(localStorage.getItem('achtsamkeit'));
+    const storedLebenszufriedenheit = Number(localStorage.getItem('lebenszufriedenheit'));
+    const storedProkastination = Number(localStorage.getItem('prokastination'));
+    const storedSelbstwirksamkeit = Number(localStorage.getItem('selbstwirksamkeit'));
+    const storedPolitischeSelbstwirksamkeit = Number(localStorage.getItem('politischeSelbstwirksamkeit'));
+    const storedBerufsUndOrganisationsklima = Number(localStorage.getItem('berufsUndOrganisationsklima'));
 </script>
+
+
 
 
 
@@ -579,7 +616,8 @@ const resilienzValue = Number(localStorage.getItem('resilienz'));
                                     datasets: [{
                                         // Real data
                                         label: 'individuelle Facettenausprägung',
-                                        data: [2.7455555555555,3.13555555555,3.555555527,2.70555555555,2.70], //['%Neurotizismus%', '%Extraversion%', '%Offenheit%', '%Verträglichkeit%', '%Gewissenhaftigkeit%']
+                                        data: [storedNeurotizismus,storedExtraversion,storedOffenheit,storedVertraeglichkeit,storedGewissenhaftigkeit], //['%Neurotizismus%', '%Extraversion%', '%Offenheit%', '%Verträglichkeit%', '%Gewissenhaftigkeit%']
+                                        
                                         fill: true,
                                         backgroundColor: [
                                             'rgba(153, 102, 255, 0.2)'
@@ -742,7 +780,7 @@ const resilienzValue = Number(localStorage.getItem('resilienz'));
                                             datasets: [{
         
                                                 //real data
-                                                        data: [0.12, 0.19, 0.08, 0.14, 0.2, 0.14], //['%Achtsamkeit%', '%Lebenszufriedenheit%', '%Prokastination%', '%Selbstwirksamkeit%', '%PolitischeSelbstwirksamkeit%', '%BerufsUndOrganisationsklima%']
+                                                data: [storedAchtsamkeit, storedLebenszufriedenheit, storedProkastination,storedSelbstwirksamkeit ,storedPolitischeSelbstwirksamkeit, storedBerufsUndOrganisationsklima], //['%Achtsamkeit%', '%Lebenszufriedenheit%', '%Prokastination%', '%Selbstwirksamkeit%', '%PolitischeSelbstwirksamkeit%', '%BerufsUndOrganisationsklima%']
                                                         fill: true,
                                                 backgroundColor: [
                                                 'rgba(178, 24, 43, 0.2)',
