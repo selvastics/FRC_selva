@@ -1,0 +1,1111 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RC-Fragebogen</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JHDET79DNG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JHDET79DNG');
+</script>
+
+    
+<style>
+        .gitbook-container {
+            display: flex;
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px; /* Add space below the GitBook */
+        }
+
+
+        /* Update styles for the TOC container */
+        .gitbook-toc {
+            flex: 0 0 25%; /* Adjust the percentage as needed */
+            max-width: 25%; /* Adjust the maximum width as needed */
+            background-color: #f5f5f5;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            height: auto;
+            margin-right: 20px; /* Add margin-right for spacing */
+            overflow-y: auto;
+        }
+        .gitbook-toc h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #333333;
+        }
+
+        .gitbook-toc ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .gitbook-toc li {
+            margin-bottom: 10px;
+        }
+
+
+
+        .gitbook-toc a {
+            color: #666666;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .gitbook-content {
+            width: auto;
+            padding: auto;
+            overflow-y: auto;
+            max-height: calc(100vh); /* Adjust for top and bottom padding */
+        }
+
+
+
+
+
+        .gitbook-section {
+        margin-bottom: 40px;
+        max-width: 98%; /* Passen Sie diesen Wert an, um die Breite des Textes zu ändern */
+
+        display: none; /* Hide gitbook sections by default */
+    }
+
+    .gitbook-section h2 {
+        font-size: 24px;
+        color: #333333;
+        margin-bottom: 10px;
+    }
+
+    .gitbook-section p {
+        font-size: 16px;
+        color: #666666;
+        line-height: 1.6;
+    }
+
+
+
+    .gitbook-toc a.active {
+    color: rgb(74, 74, 88);
+    font-weight: bold;
+}
+
+
+    #social-share {
+    margin-top: -15%; /* Verwenden Sie einen negativen Wert, um den Abstand zu verringern */
+}
+
+</style>
+
+
+
+
+<script>
+
+
+
+
+
+
+
+
+
+    // Assuming the URL is https://example.com?Coping=4.444&Resilienz=3.606
+
+
+
+
+
+// Function to decrypt the encrypted parameters using base64
+//function decryptURLParameters(encryptedString) {
+//    var decryptedParameters = atob(encryptedString);
+//    return decryptedParameters;
+//}
+
+// Example usage
+//var encryptedString = "aWQ9aWRfbjZiOXpjdmRjJkNvcGluZz00LjQ0NDQ0NDQ0NDQ0NDQmUmVzaWxpZW56PTMuNjA2MDYwNjA2MDYwNiZOZXVyb3RpemlzbXVzPTMuMzMzMzMzMzMzMzMzMyZFeHRyYXZlcnNpb249My4zMzMzMzMzMzMzMzMzJk9mZmVuaGVpdD0yLjgzMzMzMzMzMzMzMzMmVmVydHJhZWdsaWNoa2VpdD0yLjMzMzMzMzMzMzMzMzMmR2V3aXNzZW5oYWZ0aWdrZWl0PTMuNjY2NjY2NjY2NjY2NyZBY2h0c2Fta2VpdD0wLjUmTGViZW5zenVmcmllZGVuaGVpdD0wLjUmUHJva2FzdGluYXRpb249MC41JlNlbGJzdHdpcmtzYW1rZWl0PTAuNSZQb2xpdGlzY2hlU2VsYnN0d2lya3NhbWtlaXQ9MC41JkJlcnVmc1VuZE9yZ2FuaXNhdGlvbnNrbGltYT0wLjU";
+//var decryptedString = decryptURLParameters(encryptedParameters);
+
+//alert("Oriteteginal URL:\n"+ encryptedString);
+
+
+
+
+//var parameters = "id=id_n6b9czdc&Copying=4.4444444444444&Resilienz=3.6060606060606&Neurotizismus=3.3333333333333&Extraversion=3.3333333333332&Gewissenhaftigkeit=3.333333333332&Psychastenie=2.8333333333332&ExtraversionSkala=2.8333333333322&GewissensSkala=3.6666666666667&Pokastinat=0.5&Lebenszufriedenheit=0.5&ProkastinierenSkala=0.5&BerufsUnzufriedenheitSkala=0.5&LebenszufriedenheitSkala=0.5";
+//var encryptedString = encryptURLParameters(parameters);
+//var decryptedString = decryptURLParameters(encryptedString);
+
+var url = window.location.href;
+var urlParams;
+
+if (!url.includes("Coping") || !url.includes("Neurotizismus")) {
+    var encryptedPart = url.substring(url.indexOf('unique.html?id=') + 'unique.html?id='.length);
+    var decryptedPart = decodeURIComponent(escape(window.atob(encryptedPart)));
+    var decryptedURL = url.substring(0, url.indexOf('unique.html?id=')) + 'unique.html?id=' + decryptedPart;
+    urlParams = new URLSearchParams(new URL(decryptedURL).search);
+} else {
+    urlParams = new URLSearchParams(window.location.search);
+}
+
+function encryptURLParameters(parameters) {
+    var encryptedString = window.btoa(parameters);
+    return encryptedString;
+}
+
+function decryptURLParameters(encryptedString) {
+    var decryptedParameters = atob(decodeURIComponent(encryptedString));
+    return decryptedParameters;
+}
+
+
+
+    const coping = Number(urlParams.get('Coping'));
+    const resilienz = Number(urlParams.get('Resilienz'));
+    const neurotizismus = Number(urlParams.get('Neurotizismus'));
+    const extraversion = Number(urlParams.get('Extraversion'));
+    const offenheit = Number(urlParams.get('Offenheit'));
+    const vertraeglichkeit = Number(urlParams.get('Vertraeglichkeit'));
+    const gewissenhaftigkeit = Number(urlParams.get('Gewissenhaftigkeit'));
+    const achtsamkeit = Number(urlParams.get('Achtsamkeit'));
+    const lebenszufriedenheit = Number(urlParams.get('Lebenszufriedenheit'));
+    const prokastination = Number(urlParams.get('Prokastination'));
+    const selbstwirksamkeit = Number(urlParams.get('Selbstwirksamkeit'));
+    const politischeSelbstwirksamkeit = Number(urlParams.get('PolitischeSelbstwirksamkeit'));
+    const berufsUndOrganisationsklima = Number(urlParams.get('BerufsUndOrganisationsklima'));
+
+
+    // Store parameters in localStorage
+    localStorage.setItem('coping', coping);
+    localStorage.setItem('resilienz', resilienz);
+    localStorage.setItem('neurotizismus', neurotizismus);
+    localStorage.setItem('extraversion', extraversion);
+    localStorage.setItem('offenheit', offenheit);
+    localStorage.setItem('vertraeglichkeit', vertraeglichkeit);
+    localStorage.setItem('gewissenhaftigkeit', gewissenhaftigkeit);
+    localStorage.setItem('achtsamkeit', achtsamkeit);
+    localStorage.setItem('lebenszufriedenheit', lebenszufriedenheit);
+    localStorage.setItem('prokastination', prokastination);
+    localStorage.setItem('selbstwirksamkeit', selbstwirksamkeit);
+    localStorage.setItem('politischeSelbstwirksamkeit', politischeSelbstwirksamkeit);
+    localStorage.setItem('berufsUndOrganisationsklima', berufsUndOrganisationsklima);
+
+    // Retrieve parameters from localStorage
+    const copingValue = Number(localStorage.getItem('coping'));
+    const resilienzValue = Number(localStorage.getItem('resilienz'));
+    const storedNeurotizismus = Number(localStorage.getItem('neurotizismus'));
+    const storedExtraversion = Number(localStorage.getItem('extraversion'));
+    const storedOffenheit = Number(localStorage.getItem('offenheit'));
+    const storedVertraeglichkeit = Number(localStorage.getItem('vertraeglichkeit'));
+    const storedGewissenhaftigkeit = Number(localStorage.getItem('gewissenhaftigkeit'));
+    const storedAchtsamkeit = Number(localStorage.getItem('achtsamkeit'));
+    const storedLebenszufriedenheit = Number(localStorage.getItem('lebenszufriedenheit'));
+    const storedProkastination = Number(localStorage.getItem('prokastination'));
+    const storedSelbstwirksamkeit = Number(localStorage.getItem('selbstwirksamkeit'));
+    const storedPolitischeSelbstwirksamkeit = Number(localStorage.getItem('politischeSelbstwirksamkeit'));
+    const storedBerufsUndOrganisationsklima = Number(localStorage.getItem('berufsUndOrganisationsklima'));
+
+
+    window.onload = function() {
+            // Get the URL
+            var url = window.location.href;
+            
+            // Extract the id parameter from the URL
+            var id = url.match(/id=([^&]+)/)[1];
+            
+            // Update the content of the h8 element with the extracted id
+            document.getElementById("storedId").textContent = id;
+        };
+
+
+        
+
+
+        
+// Get the current URL with parameters
+var currentURLWithParameters = window.location.href;
+
+// Check if the URL is not encrypted
+if (!currentURLWithParameters.includes("unique.html?id=")) {
+    // Function to encrypt URL parameters
+    function encryptURLParameters(parameters) {
+        var encryptedString = btoa(parameters);
+        return encryptedString;
+    }
+
+    // Find the index of "unique.html?id=" in the URL
+    var uniqueIdIndex = currentURLWithParameters.indexOf('unique.html?id=');
+    
+    // Extract the unencrypted part of the URL
+    var unencryptedPart = currentURLWithParameters.substring(0, uniqueIdIndex + 'unique.html?id='.length);
+    
+    // Encrypt only the parameters part of the URL
+    var encryptedParameters = encryptURLParameters(currentURLWithParameters);
+    
+    // Store the encrypted URL in local storage
+    localStorage.setItem('encrplink', unencryptedPart + encryptedParameters);
+} else {
+    // If the URL is already encrypted, store it directly in local storage
+    localStorage.setItem('encrplink', currentURLWithParameters);
+}
+
+window.onload = function() {
+    // Retrieve encrplinkValue from localStorage
+    var encrplinkValue = localStorage.getItem('encrplink');
+    
+    // Update the content of the h8 element with the retrieved encrplinkValue
+    document.getElementById("encrplinkValue2").textContent = encrplinkValue;
+};
+
+
+
+</script>
+
+
+    
+</head>
+<body>
+	<section class="bannerV" role="bannerV"> 
+        <header id="header">
+            <div class="header-content clearfix">
+                <a class="logo" href="#"><img src="images/logo.png" alt=""></a>
+                <nav class="navigation" role="navigation">
+                    <ul class="primary-nav">
+                        <li><a href="https://selvastics.github.io/FRC_selva/#features">Features</a></li>
+                        <li><a href="https://selvastics.github.io/FRC_selva/#teams">Our Team</a></li>
+                        <li><a href="https://selvastics.github.io/FRC_selva/#testimonials">Testimonials</a></li>
+                        <li><a href="https://selvastics.github.io/FRC_selva/#teilnehmen">Teilnehmen</a></li>
+                    </ul>
+                </nav>
+                <a href="#" class="nav-toggle">Menu<span></span></a>
+            </div>
+        </header>
+    </section><!-- banner -->
+    <section id="features" class="features section">
+        <div class="text-center">
+            <h2>Willkommen! Diese Seite ist speziell für Sie eingerichtet</h2>
+            <h3>Ihre individueller Link lautet:</h3>
+            <pre style="color: darkred;" id="encrplinkValue2"></pre>
+            <button onclick="copyURL()" id="copyButton" style="font-weight: bold; background-color: #3b3c3b; color: white; padding: 8px 15px; border: none; border-radius: 3px; cursor: pointer;">Link kopieren</button>
+        </div>
+        <div class="container">
+            <h2 style="color: white;"></h2>
+            <div class="gitbook-container">
+                <div class="gitbook-toc" id="table-of-contents">
+                    <h2>Ihre Auswertung</h2>
+                    <ul>
+                        <li><a href="#chapter1">Einleitung</a></li>
+                        <li><a href="#chapter2">Resilienz und Coping</a></li>
+                        <li><a href="#chapter3">RC-fragebogen Subskalen</a></li>
+                        <li><a href="#chapter4">BIG-5 Persönlichkeitsskalen</a></li>
+                        <li><a href="#chapter5">Validierungsskalen</a></li> <!-- Corrected href attribute -->
+                        <!-- Add more chapters as needed -->
+                    </ul>
+                </div>
+                <div class="gitbook-content">
+                    <div class="gitbook-section active" id="chapter1">
+                        <h2>Einleitung</h2>
+                        <p>Herzlich willkommen zu Ihrer persönlichen Auswertung! Bevor Sie sich in die Details Ihrer Ergebnisse vertiefen, möchten wir Ihnen einige wichtige Hinweise geben. 
+                            Es ist wichtig zu beachten, dass Ihrer Ergebnisse zum Teil auf einem Fragebogen basieren, der sich noch in der Entwicklung befindet, und die zugrunde liegenden Konstruktannahmen bisher nicht validiert wurden. Darüber hinaus sollten Sie Ihre Ergebnisse nicht direkt mit anderen Studien vergleichen, da unterschiedliche Methoden und Skalen verwendet wurden. Stattdessen sollten Sie Ihre Ergebnisse als Orientierungshilfe betrachten und nicht als absoluten Maßstab.
+                            Ein Vergleich ist über alle Personen, die bislang an unserer Studie teilgenommen haben möglich. Dabei stellen die bulten Balken Ihre Werte da, während grau schraffierte Balken die Vergleichsstichprobe darstellen. Zusätzlich sind Fehlerbalken  
+                            abgebildetet, die eine durchschnittliche Abweichungen vom Mittelwert darstellen. Am Ende jeder Seite finden Sie eine kurze Erklärung zu den jeweiligen Konstrukten.
+
+                            Wenn Sie sich unsicher fühlen oder Fragen zu Ihren Ergebnissen haben, zögern Sie bitte nicht, uns zu kontaktieren.</p>
+                    </div>
+
+
+
+                
+                    <div class="gitbook-section" id="chapter2">
+                        <h2>Resilienz und Coping</h2>
+                        <p>Die Werte verteilen sich auf einer Skala von 1 (minimale Ausprägung) bis 7 (maximale Ausprägung). Am Ende der Seite finden Sie eine kurze Erklärung zu den Konstrukten Resilienz und Coping.</p>
+                    
+                        <title>Chart with Download Link</title>
+                        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+                    
+                        <div style="width: 80%; margin: 0 auto;">
+                            <canvas id="myChart1"></canvas>
+                        </div>
+                    
+                        <script>
+                            const { jsPDF } = window.jspdf;
+                            const ctx1 = document.getElementById('myChart1');
+                    
+                            const HatchingAndErrorBars = {
+                                id: 'HatchingAndErrorBars',
+                                afterDraw: (chart) => {
+                                    const { ctx } = chart;
+                                    const datasetIndex = 1; // Comparative Study Data is the second dataset
+                                    const meta = chart.getDatasetMeta(datasetIndex);
+                                    const yAxis = chart.scales['y'];
+                                    const errorValues = [1.12, 0.97]; // Replace with your error values
+                    
+                                    // Calculate the pixel for y value 1
+                                    const yForOne = yAxis.getPixelForValue(1);
+                    
+                                    // Draw hatching
+                                    meta.data.forEach((bar) => {
+                                        const { x, y, width } = bar.getProps(['x', 'y', 'width']);
+                                        ctx.save();
+                                        ctx.strokeStyle = 'rgba(0, 0, 0, 0.3)';
+                                        ctx.beginPath();
+                                        for (let i = y; i < yForOne; i += 20) {
+                                            let endY = i + 10;
+                                            if (endY > yForOne) {
+                                                endY = yForOne;
+                                            }
+                                            ctx.moveTo(x - width / 2, i);
+                                            ctx.lineTo(x + width / 2, endY);
+                                        }
+                                        ctx.stroke();
+                                        ctx.restore();
+                                    });
+                    
+                                    // Draw error bars
+                                    meta.data.forEach((bar, index) => {
+                                        const { x, y } = bar.getProps(['x', 'y']);
+                                        const error = errorValues[index];
+                                        const yWithError = yAxis.getPixelForValue(chart.data.datasets[datasetIndex].data[index] + error);
+                                        const yWithErrorMin = yAxis.getPixelForValue(chart.data.datasets[datasetIndex].data[index] - error);
+                    
+                                        ctx.save();
+                                        ctx.strokeStyle = 'black';
+                                        ctx.lineWidth = 1;
+                    
+                                        // Draw the top cap
+                                        ctx.beginPath();
+                                        ctx.moveTo(x - 5, yWithError);
+                                        ctx.lineTo(x + 5, yWithError);
+                                        ctx.stroke();
+                    
+                                        // Draw the bottom cap
+                                        ctx.beginPath();
+                                        ctx.moveTo(x - 5, yWithErrorMin);
+                                        ctx.lineTo(x + 5, yWithErrorMin);
+                                        ctx.stroke();
+                    
+                                        // Draw the vertical line
+                                        ctx.beginPath();
+                                        ctx.moveTo(x, yWithError);
+                                        ctx.lineTo(x, yWithErrorMin);
+                                        ctx.stroke();
+                    
+                                        ctx.restore();
+                                    });
+                                }
+                            };
+                    
+                            new Chart(ctx1, {
+                                type: 'bar',
+                                data: {
+                                    labels: ['Coping', 'Resilienz'],
+                                    datasets: [
+                                        {
+                                            // Real data
+                                            data: [copingValue, resilienzValue],
+                                            fill: true,
+                                            backgroundColor: [
+                                                'rgba(153, 102, 255, 0.2)'
+                                            ],
+                                            borderColor: [
+                                                'rgba(153, 102, 255, 1)'
+                                            ],
+                                            borderWidth: 1.5
+                                        },
+                                        {
+                                            // Old data
+                                            label: 'Vorstudie (N = 498)',
+                                            data: [5.09, 4.85],
+                                            borderWidth: 1.5
+                                        }
+                                    ]
+                                },
+                                options: {
+                                    scales: {
+                                        y: {
+                                            min: 1,
+                                            max: 7,
+                                            ticks: {
+                                                font: {
+                                                    size: 18
+                                                }
+                                            }
+                                        }
+                                    },
+                                    plugins: {
+                                        legend: {
+                                            display: false
+                                        }
+                                    }
+                                },
+                                plugins: [HatchingAndErrorBars]
+                            });
+                        </script>
+
+<p>
+<b>Resilienz</b> ist die Fähigkeit einer Person, gut mit schwierigen Situationen und Belastungen umzugehen und sich davon zu erholen. Es handelt sich um eine psychologische Eigenschaft, die dazu beiträgt, dass Menschen in schwierigen Zeiten gesund bleiben und sich an neue Herausforderungen anpassen können (Luthar, 2006). <br>
+
+<b>Coping</b> bezieht sich auf jene Gedanken und Verhaltensweisen, die zur Bewältigung von auch alltäglichen belastenden Situationen beitragen (Folkman & Moskowitz, 2004).
+</p>
+                    </div>
+
+
+
+
+
+
+                    <div class="gitbook-section" id="chapter3">
+                        <h2>RC-fragebogen Subskalen</h2>
+                        <p>Die Werte verteilen sich auf einer Skala von 1 (minimale Ausprägung) bis 7 (maximale Ausprägung). Beachten Sie, dass die Präsentation dieser Ergebnisse auf einem noch in Bearbeitung befindlichen Fragebogen basiert, und die Konstruktannahmen bisher nicht validiert wurden.
+                            Am Ende der Seite finden Sie eine kurze Erklärung zu den einzelnen Faktoren.                        
+                        </p>
+
+
+                        <title>Chart with Download Link</title>
+
+                        <div>
+                          <canvas id="myChart"></canvas>
+                        </div>
+                        
+                        <script>
+                          const ctx = document.getElementById('myChart');
+                        
+                          // Utilizing the existing HatchingAndErrorBars object
+                          const HatchingAndErrorBars5 = {
+                            id: 'HatchingAndErrorBars',
+                            afterDraw: (chart) => {
+                            const { ctx } = chart;
+                            const datasetIndex = 1; // Comparative Study Data is the second dataset
+                            const meta = chart.getDatasetMeta(datasetIndex);
+                            const yAxis = chart.scales['y'];
+                            const errorValues = [1.27, 1.13, 0.79, 0.94, 1.41, 1.19, 0.97, 2.07, 1.15, 1.22, 1.34, 0.51, 1.32, 1.55, 1.33]; // Replace with your error values
+                            
+                            // Calculate the pixel for y value 0
+                            const yForZero = yAxis.getPixelForValue(1);
+                            
+                            // Draw hatching
+                            meta.data.forEach((bar) => {
+                                const { x, y, width } = bar.getProps(['x', 'y', 'width']);
+                                ctx.save();
+                                ctx.strokeStyle = 'rgba(0, 0, 0, 0.3)';
+                                ctx.beginPath();
+                                for (let i = y; i < yForZero; i += 20) {
+                                let endY = i + 10;
+                                if (endY > yForZero) {
+                                    endY = yForZero;
+                                }
+                                ctx.moveTo(x - width / 2, i);
+                                ctx.lineTo(x + width / 2, endY);
+                                }
+                                ctx.stroke();
+                                ctx.restore();
+                            });
+
+                            // Draw error bars
+                            meta.data.forEach((bar, index) => {
+                                const { x, y } = bar.getProps(['x', 'y']);
+                                const error = errorValues[index];
+                                const yWithError = yAxis.getPixelForValue(chart.data.datasets[datasetIndex].data[index] + error);
+                                const yWithErrorMin = yAxis.getPixelForValue(chart.data.datasets[datasetIndex].data[index] - error);
+
+                                ctx.save();
+                                ctx.strokeStyle = 'black';
+                                ctx.lineWidth = 1;
+
+                                // Draw the top cap
+                                ctx.beginPath();
+                                ctx.moveTo(x - 5, yWithError);
+                                ctx.lineTo(x + 5, yWithError);
+                                ctx.stroke();
+
+                                // Draw the bottom cap
+                                ctx.beginPath();
+                                ctx.moveTo(x - 5, yWithErrorMin);
+                                ctx.lineTo(x + 5, yWithErrorMin);
+                                ctx.stroke();
+
+                                // Draw the vertical line
+                                ctx.beginPath();
+                                ctx.moveTo(x, yWithError);
+                                ctx.lineTo(x, yWithErrorMin);
+                                ctx.stroke();
+
+                                ctx.restore();
+                            });
+                            }
+                        };
+                        
+                          new Chart(ctx, {
+                            type: 'bar',
+                            data: {
+                              labels: ['Aktives Coping', 'Akzeptanz', 'Familiärer Zusammenhalt', 'Humor', 'Instrumentelle Unterstützung', 'Optimismus', 'Positives Denken', 'Religion', 'Selbstwahrnehmung', 'Sinn, Zweck und Bestimmung', 'Soziale Unterstützung', 'Kein Substanzenmissbrauch', 'Umgang mit Angst', 'Kein Wunschdenken', 'Zukunftsplanung'],
+                              datasets: [{
+                                // Real data
+                                data: [
+                                  '%AktivesCoping%', 
+                                  '%Akzeptanz%', 
+                                  '%FamiliarerZusammenhalt%', 
+                                  '%Humor%', 
+                                  '%InstrumentelleUnterstuetzung%', 
+                                  '%Optimismus%', 
+                                  '%positivesDenken%', 
+                                  '%Religion%', 
+                                  '%Selbstwahrnehmung%', 
+                                  '%SinnZweck%', 
+                                  '%Sozialeuntestuetzung%', 
+                                  '%keinSubstanzenmissbrauch%', 
+                                  '%UmgangmitAngst%', 
+                                  '%keinWunschdenken%', 
+                                  '%Zukunftsplanung%'
+                                ],
+                                fill: true,
+                                backgroundColor: [
+                                  'rgba(178, 24, 43, 0.2)',
+                                  'rgba(33, 102, 172, 0.2)',
+                                  'rgba(0, 128, 0, 0.2)',
+                                  'rgba(255, 0, 0, 0.2)',
+                                  'rgba(255, 127, 0, 0.2)',
+                                  'rgba(106, 61, 154, 0.2)',
+                                  'rgba(255, 223, 0, 0.2)',
+                                  'rgba(255, 192, 203, 0.2)',
+                                  'rgba(70, 130, 180, 0.2)',
+                                  'rgba(0, 255, 0, 0.2)',
+                                  'rgba(255, 165, 0, 0.2)',
+                                  'rgba(128, 0, 128, 0.2)',
+                                  'rgba(128, 128, 0, 0.2)',
+                                  'rgba(255, 140, 0, 0.2)',
+                                  'rgba(173, 216, 230, 0.2)'
+                                ],
+                                borderColor: [
+                                        'rgba(178, 24, 43, 1)',
+                                        'rgba(33, 102, 172, 1)',
+                                        'rgba(0, 128, 0, 1)',
+                                        'rgba(255, 0, 0, 1)',
+                                        'rgba(255, 127, 0, 1)',
+                                        'rgba(106, 61, 154, 1)',
+                                        'rgba(255, 223, 0, 1)',
+                                        'rgba(255, 192, 203, 1)',
+                                        'rgba(70, 130, 180, 1)',
+                                        'rgba(0, 255, 0, 1)',
+                                        'rgba(255, 165, 0, 1)',
+                                        'rgba(128, 0, 128, 1)',
+                                        'rgba(128, 128, 0, 1)',
+                                        'rgba(255, 140, 0, 1)',
+                                        'rgba(173, 216, 230, 1)'
+                                    ],
+                                    borderWidth: 1.5
+                            },
+
+
+                        //old data
+                                {
+                                label: 'Vorstudie (N = 498)',
+                                data: [4.6, 4.9, 5.2, 5.0, 4.5, 5.0, 4.7, 4.4, 5.0, 4.9, 4.9, 5.6, 4.6, 4.4, 4.8],
+                                borderWidth: 1.5
+                                }
+                            ]
+                            },
+
+
+
+                            options: {
+                              scales: {
+                                x: {
+                                  ticks: {
+                                    maxRotation: 45,
+                                    minRotation: 45
+                                  }
+                                },
+                                y: {
+                                  min: 1,
+                                  max: 7,
+                                  pointLabels: {
+                                    font: {
+                                      size: 18
+                                    }
+                                  }
+                                }
+                              },
+                              plugins: {
+                                legend: {
+                                  display: false
+                                }
+                              }
+                            },
+                            plugins: [HatchingAndErrorBars5] // Using the existing HatchingAndErrorBars object
+                          });
+                        </script>
+                        
+                        <p>
+                            <i>Die nachfolgenden Konstruktdefinitionen orientieren sich an den Beschreibungen von Carver (1997) sowie Southwick und Charney (2018).</i><br>
+
+                            <b>Aktives Coping</b> bezeichnet Strategien und Verhaltensweisen, die darauf abzielen, Probleme direkt anzugehen und zu lösen, indem Ressourcen mobilisiert und lösungsorientierte Maßnahmen ergriffen werden, um Herausforderungen zu bewältigen und Stress abzubauen.<br>
+                            
+                            <b>Akzeptanz</b> ist die Fähigkeit, Ereignisse, Zustände und Emotionen so anzunehmen, wie sie sind, ohne den Versuch, diese zu ändern oder zu bewerten. Durch Akzeptanz können Individuen zu einer friedvolleren Haltung gegenüber unveränderbaren Situationen gelangen und innere Ruhe finden.<br>
+                            
+                            <b>Familiärer Zusammenhalt</b> beschreibt das Ausmaß an emotionaler Bindung, Unterstützung und Zusammenarbeit zwischen Familienmitgliedern. Es ist ein Indikator für die Stärke und Stabilität familiärer Beziehungen und trägt zum psychosozialen Wohlbefinden bei.<br>
+                            
+                            <b>Humor</b> ist die Fähigkeit, in verschiedenen Lebenssituationen Heiterkeit und Vergnügen zu empfinden oder zu erzeugen, sowie die Neigung, auch schwierige Umstände mit einer gewissen Leichtigkeit und Gelassenheit zu betrachten.<br>
+                            
+                            <b>Instrumentelle Unterstützung</b> bezieht sich auf praktische Hilfeleistungen, wie zum Beispiel materielle Beistände oder Dienstleistungen, die Individuen von ihrem sozialen Netzwerk erhalten, um sich in Zeiten der Not zu entlasten.<br>
+                            
+                            <b>Optimismus</b> ist die Tendenz, zukünftige Ereignisse in einem positiven Licht zu sehen und von günstigen Ausgängen auszugehen. Diese Grundhaltung fördert positive Erwartungen an das Leben und die eigene Handlungskompetenz.<br>
+                            
+                            <b>Positives Denken</b> bezieht sich auf die Gewohnheit, Gedanken und Sichtweisen zu kultivieren, die eine hoffnungsvolle und konstruktive Perspektive auf das Leben und seine Herausforderungen fördern.<br>
+                            
+                            <b>Religion</b> bezeichnet die Praxis und die Überzeugungen, die mit dem Glauben an eine höhere Macht oder spirituelle Prinzipien verbunden sind. Diese können Trost bieten, Sinn stiften und ein ethisches Gerüst für das Verhalten einer Person liefern.<br>
+                            
+                            <b>Selbstwahrnehmung</b> ist die Einsicht in die eigenen Gedanken, Gefühle und Verhaltensweisen. Sie ermöglicht Individuen, sich ihrer selbst bewusst zu werden und reflexiv auf ihre Handlungen und inneren Zustände zu reagieren.<br>
+                            
+                            <b>Sinn und Zweck</b> beziehen sich auf das Empfinden, dass das eigene Leben und Handeln bedeutungsvoll ist und einem übergeordneten Ziel oder einer Bestimmung folgt, was individuelle Motivation und Lebenszufriedenheit steigern kann.<br>
+                            
+                            <b>Soziale Unterstützung</b> umfasst alle Formen von Hilfe und Beistand, die eine Person von ihrem sozialen Netzwerk erhält, einschließlich emotionaler, informationeller und praktischer Unterstützung.<br>
+                            
+                            <b>Kein Substanzenmissbrauch</b> bezeichnet das bewusste Vermeiden des übermäßigen oder unkontrollierten Konsums von legalen oder illegalen Drogen, Alkohol oder Medikamenten, was zur Erhaltung der physischen und psychischen Gesundheit beiträgt.<br>
+                            
+                            <b>Umgang mit Angst</b> beschreibt die Fähigkeiten und Techniken, die eine Person anwendet, um Angstzustände zu erkennen, zu verstehen und zu bewältigen, um ihre Funktionsfähigkeit und Lebensqualität zu erhalten oder zu verbessern.<br>
+                            
+                            <b>Kein Wunschdenken</b> bezeichnet eine realistische und pragmatische Lebenseinstellung, bei der Entscheidungen und Erwartungen auf nachvollziehbaren Überlegungen und nicht auf unrealistischen Hoffnungen basieren.<br>
+                            
+                            <b>Zukunftsplanung</b> ist das systematische Vorgehen einer Person, um Langzeitziele zu setzen und Schritte zu entwickeln, die notwendig sind, um diese Ziele zu erreichen, was zur persönlichen Weiterentwicklung und zur Erreichung von Lebenszielen beiträgt.
+                        
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                    <div class="gitbook-section" id="chapter4">
+                        <h2>BIG-5 Persönlichkeitsskalen</h2>
+                        <p>
+                            Die BIG-5 Persönlichkeiten sind ein Modell der Persönlichkeitspsychologie, das die fünf Hauptdimensionen der Persönlichkeit beschreibt. Diese Dimensionen werden als Neurotizismus, Extraversion, Offenheit für Erfahrungen, Verträglichkeit und Gewissenhaftigkeit bezeichnet.
+                            Zusammengenommen bilden diese fünf Dimensionen ein umfassendes Bild der Persönlichkeit einer Person und können helfen, Ihr Verhalten und Ihre Interaktionen mit anderen besser zu verstehen. Es ist wichtig zu beachten, dass die BIG-5 Persönlichkeiten keine festen Kategorien sind und dass jeder Mensch einzigartig ist und seine eigenen individuellen Eigenschaften und Charakterzüge hat. Eine Beschreibung zu den einzelnen Facetten findet sich am Ende der Seite.
+                            Die Werte verteilen sich auf einer Skala von 1 (minimale Ausprägung) bis 5 (maximale Ausprägung).
+
+                        </p>
+                    
+                        <div style="width: 80%; margin: 0 auto; ">
+                            <canvas id="myChart2" style="width: 100%;"></canvas>
+                        </div>
+                    
+                        <script>
+                            const ctx2 = document.getElementById('myChart2');
+                            new Chart(ctx2, {
+                                type: 'radar',
+                                data: {
+                                    labels: ['Neurotizismus', 'Extraversion', 'Offenheit', 'Verträglichkeit', 'Gewissenhaftigkeit'],
+                                    datasets: [{
+                                        // Real data
+                                        label: 'individuelle Facettenausprägung',
+                                        data: [storedNeurotizismus,storedExtraversion,storedOffenheit,storedVertraeglichkeit,storedGewissenhaftigkeit], //['%Neurotizismus%', '%Extraversion%', '%Offenheit%', '%Verträglichkeit%', '%Gewissenhaftigkeit%']
+                                        
+                                        fill: true,
+                                        backgroundColor: [
+                                            'rgba(153, 102, 255, 0.2)'
+                                        ],
+                                        borderColor: [
+                                            'rgba(153, 102, 255, 1)'
+                                        ],
+                                        borderWidth: 1.5
+                                    }, {
+                                        // Norm data
+                                        label: 'Normwerte',
+                                        data: [2.74,3.13,3.27,2.70,2.70],
+                                        fill: true,
+                                        backgroundColor: [
+                                            'rgba(75, 192, 192, 0.2)'
+                                        ],
+                                        borderColor: [
+                                            'rgba(75, 192, 192, 1)'
+                                        ],
+                                        borderWidth: 1.5
+                                    }]
+                                },
+                                options: {
+
+                                    scales: {
+                                        r: {
+                                            min: 0,
+                                            max: 5,
+                                            pointLabels: {
+                                                font: {
+                                                    size: 15
+                                                }
+                                            },
+                                            angleLines: {
+                                                display: false // Hide the lines connecting the center to the labels
+                                            },
+                                            ticks: {
+                                                stepSize: 1, // Set the step size for labels
+                                                callback: function(value, index, values) {
+                                                    // Skip labels for specific values (e.g., 0 and 5)
+                                                    if (value === 0) {
+                                                        return '';
+                                                    }
+                                                    return value;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    
+                                }
+                            });
+                        </script>
+
+
+<p>
+<b>Neurotizismus:</b> Diese Dimension beschreibt die Tendenz, emotional instabil und anfällig für Stress zu sein. Menschen mit hohem Neurotizismus sind empfindlich, ängstlich und unruhig. Sie neigen dazu, sich Sorgen zu machen und haben ein hohes Bedürfnis nach Sicherheit.<br>
+
+<b>Extraversion:</b> Diese Dimension beschreibt die Tendenz, aktiv und offen im sozialen Umgang zu sein. Menschen mit hoher Extraversion sind gesellig, energiegeladen und kontaktfreudig. Sie suchen die Gesellschaft anderer Menschen und genießen es, neue Leute kennenzulernen. Sie sind auch selbstbewusst und können ihre Meinungen offen äußern.<br>
+
+<b>Offenheit für Erfahrungen:</b> Diese Dimension bezieht sich auf die Bereitschaft, neue Ideen und Erfahrungen zu akzeptieren und zu suchen. Menschen mit hoher Offenheit sind neugierig, kreativ und abenteuerlustig. Sie sind offen für neue Erfahrungen und haben eine große Bandbreite an Interessen. Sie sind auch offen für komplexe Ideen und können flexibel denken.<br>
+
+<b>Verträglichkeit:</b> Diese Dimension bezieht sich auf die Fähigkeit, empathisch und kooperativ im sozialen Umgang zu sein. Menschen mit hoher Verträglichkeit sind freundlich, zuvorkommend und hilfsbereit. Sie sind auch geduldig und verstehen die Perspektiven anderer Menschen. Sie haben auch ein geringes Bedürfnis, andere zu kontrollieren oder zu manipulieren.<br>
+
+<b>Gewissenhaftigkeit:</b> Diese Dimension bezieht sich auf die Fähigkeit, sorgfältig und verantwortungsbewusst zu handeln. Menschen mit hoher Gewissenhaftigkeit sind organisiert, zuverlässig und diszipliniert. Sie planen ihre Zeit und ihre Aktivitäten sorgfältig und setzen sich Ziele, die sie erreichen wollen. Sie sind auch selbstkontrolliert und können ihre Impulse unter Kontrolle halten.<br>
+
+<i>Nähere Informationen in "The Five-Factor Model of Personality: Theoretical Perspectives" von Paul T. Costa Jr. und Robert R. McCrae (1996), in der Zeitschrift Annual Review of Psychology.</i>
+ </p>
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="gitbook-section" id="chapter5">
+                        <h2>Validierungsskalen</h2>
+                        <p> Die Ursprungswerte verteilen sich auf jeweils unterschiedlichen Skalen (z.B. 1-5 oder 1-7). Daher wurde eine Normalisierung durchgeführt, um Ihre Ergebnisse auf einer gemeinsamen Skala von 0 (minimale Ausprägung) bis 1 (maximale Ausprägung) zu vergleichen. Am Ende der Seite finden Sie eine kurze Erklärung zu den Konstrukten.</p>
+
+                                <div>
+                                    <canvas id="myChart3"></canvas>
+                                </div>
+                            
+                                <script>
+                                    const ctx3 = document.getElementById('myChart3');
+                            
+                                    const HatchingAndErrorBars3 = {
+                                        id: 'HatchingAndErrorBars3',
+                                        afterDraw: (chart) => {
+                                            const { ctx } = chart;
+                                            const datasetIndex = 1; // Comparative Study Data is the second dataset
+                                            const meta = chart.getDatasetMeta(datasetIndex);
+                                            const yAxis = chart.scales['y'];
+                                            const errorValues = [0.12, 0.19, 0.08, 0.14, 0.2, 0.14]; // Replace with your error values
+                                            
+                                            // Calculate the pixel for y value 0
+                                            const yForZero = yAxis.getPixelForValue(0);
+                                            
+                                            // Draw hatching
+                                            meta.data.forEach((bar) => {
+                                                const { x, y, width } = bar.getProps(['x', 'y', 'width']);
+                                                ctx.save();
+                                                ctx.strokeStyle = 'rgba(0, 0, 0, 0.3)';
+                                                ctx.beginPath();
+                                                for (let i = y; i < yForZero; i += 20) {
+                                                    let endY = i + 10;
+                                                    if (endY > yForZero) {
+                                                        endY = yForZero;
+                                                    }
+                                                    ctx.moveTo(x - width / 2, i);
+                                                    ctx.lineTo(x + width / 2, endY);
+                                                }
+                                                ctx.stroke();
+                                                ctx.restore();
+                                            });
+                            
+                                            // Draw error bars
+                                            meta.data.forEach((bar, index) => {
+                                                const { x, y } = bar.getProps(['x', 'y']);
+                                                const error = errorValues[index];
+                                                const yWithError = yAxis.getPixelForValue(chart.data.datasets[datasetIndex].data[index] + error);
+                                                const yWithErrorMin = yAxis.getPixelForValue(chart.data.datasets[datasetIndex].data[index] - error);
+                            
+                                                ctx.save();
+                                                ctx.strokeStyle = 'black';
+                                                ctx.lineWidth = 1;
+                            
+                                                // Draw the top cap
+                                                ctx.beginPath();
+                                                ctx.moveTo(x - 5, yWithError);
+                                                ctx.lineTo(x + 5, yWithError);
+                                                ctx.stroke();
+                            
+                                                // Draw the bottom cap
+                                                ctx.beginPath();
+                                                ctx.moveTo(x - 5, yWithErrorMin);
+                                                ctx.lineTo(x + 5, yWithErrorMin);
+                                                ctx.stroke();
+                            
+                                                // Draw the vertical line
+                                                ctx.beginPath();
+                                                ctx.moveTo(x, yWithError);
+                                                ctx.lineTo(x, yWithErrorMin);
+                                                ctx.stroke();
+                            
+                                                ctx.restore();
+                                            });
+                                        }
+                                    };
+                            
+                                    new Chart(ctx3, {
+                                        type: 'bar',
+                                        data: {
+                                            labels: ['Achtsamkeit', 'Lebenszufriedenheit', 'Prokastination', 'Selbstwirksamkeit', 'Politische Selbstwirksamkeit', 'Berufs- und Organisationsklima'],
+                                            datasets: [{
+        
+                                                //real data
+                                                data: [storedAchtsamkeit, storedLebenszufriedenheit, storedProkastination,storedSelbstwirksamkeit ,storedPolitischeSelbstwirksamkeit, storedBerufsUndOrganisationsklima], //['%Achtsamkeit%', '%Lebenszufriedenheit%', '%Prokastination%', '%Selbstwirksamkeit%', '%PolitischeSelbstwirksamkeit%', '%BerufsUndOrganisationsklima%']
+                                                        fill: true,
+                                                backgroundColor: [
+                                                'rgba(178, 24, 43, 0.2)',
+                                                'rgba(33, 102, 172, 0.2)',
+                                                'rgba(0, 128, 0, 0.2)',
+                                                'rgba(255, 0, 0, 0.2)',
+                                                'rgba(255, 127, 0, 0.2)',
+                                                'rgba(106, 61, 154, 0.2)'
+                                                ],
+                                                borderColor: [
+                                                'rgba(178, 24, 43, 1)',
+                                                'rgba(33, 102, 172, 1)',
+                                                'rgba(0, 128, 0, 1)',
+                                                'rgba(255, 0, 0, 1)',
+                                                'rgba(255, 127, 0, 1)',
+                                                'rgba(106, 61, 154, 1)'
+                                                        ],
+                                                        borderWidth: 1.5
+                                                    },
+                                                
+                                                
+                                                //old data
+                                                        {
+                                                        label: 'Vorstudie (N = 498)',
+                                                        data: [0.68, 0.68,0.65,0.71,0.52,0.78],
+                                                        borderWidth: 1.5
+                                                        }
+                                                    ]
+                                                    },
+                                                
+
+                                        options: {
+                                            scales: {
+                                                x: {
+                                                    ticks: {
+                                                        maxRotation: 45,
+                                                        minRotation: 45
+                                                    }
+                                                },
+                                                y: {
+                                                    min: 0,
+                                                    max: 1,
+                                                    pointLabels: {
+                                                        font: {
+                                                            size: 18
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            plugins: {
+                                                legend: {
+                                                    display: false
+                                                }
+                                            }
+                                        },
+                                        plugins: [HatchingAndErrorBars3]
+                                    });
+                                </script>
+                                <p>
+
+                                    <b>Achtsamkeit</b> ist das bewusste, nicht wertende Aufmerksamkeitslenken auf den aktuellen Moment. Sie hilft dabei, Gedanken, Gefühle und Körperempfindungen bewusster wahrzunehmen und zu verarbeiten (Walach et al., 2004).<br>
+
+                                    <b>Lebenszufriedenheit</b> ist die subjektive Einschätzung des Wohlstandes und der Qualität des eigenen Lebens als Ganzes. Sie ist ein weitreichender Indikator für psychisches Wohlbeﬁnden (Janke & Glöckner-Rist, 2014).<br>
+                                    
+                                    <b>Prokrastination</b> ist das wiederholte, unnötige und oft schädliche Aufschieben von Handlungen, trotz vorhandener Möglichkeiten und Ressourcen, die Aufgaben in einer angemessenen Zeit zu erledigen (Klingsieck & Fries, 2018).<br>
+                                    
+                                    <b>Selbstwirksamkeit</b> bezeichnet das Vertrauen in die eigenen Fähigkeiten, spezifische Aufgaben in bestimmten Situationen erfolgreich zu bewältigen (Jerusalem & Schwarzer, 2003).<br>
+                                    
+                                    <b>Politische Selbstwirksamkeit</b> ist das empfundene Vermögen einer Person, durch ihr Handeln und ihre Meinung Einfluss auf politische Prozesse und Entscheidungen zu nehmen (Bromme et al., 2020).<br>
+                                    
+                                    <b>Berufs- und Organisationsklima</b> beschreibt die kollektiven Einstellungen, Werte und Verhaltensmuster, die in einem beruflichen Umfeld oder einer Organisation vorherrschen und das Verhalten der Mitglieder beeinflussen (Fischer et al., 2018).
+
+                            </div>
+                            
+                    
+                    <!-- Add more chapters and sections as needed -->
+                </div> <!-- Schließt .gitbook-content -->
+            </div> <!-- Schließt .gitbook-container -->
+        </div> <!-- Schließt .container -->
+    </section> <!-- Schließt .features section -->
+
+
+    <section id="social-share" class="section social-share">
+        <div class="container">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <h3>Teilen Sie Ihre Ergebnisse mit anderen</h3>
+                <a href="https://www.instagram.com/" target="_blank" class="btn btn-large">Instagram</a>
+                <a href="https://www.facebook.com/" target="_blank" class="btn btn-large">Facebook</a>
+                <a href="https://www.linkedin.com/" target="_blank" class="btn btn-large">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                        <div class="text-center">
+                        <h5>Über das RC-Projekt</h5>
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                    </div>
+                </div>
+            </div>
+        </div><!-- footer top -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="col-md-12">
+                    <p>Copyright © 2024 RC-Fragebogen. All Rights Reserved<br>Made with <i class="fa fa-heart pulse"></i> by <a href="https://selvastics.github.io/">Selvastics</a></p>
+                </div>
+            </div>
+        </div>
+    </footer><!-- footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/retina.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/main.js"></script>
+    
+    
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+
+
+    // Function to toggle active section and update table of contents link styles
+    function toggleSection(sectionId) {
+        // Hide all gitbook sections
+        var sections = document.querySelectorAll('.gitbook-section');
+        sections.forEach(function(section) {
+            section.style.display = 'none';
+        });
+
+        // Show the clicked section
+        var activeSection = document.getElementById(sectionId);
+        activeSection.style.display = 'block';
+
+        // Remove active class from all table of contents links
+        var tocLinks = document.querySelectorAll('.gitbook-toc a');
+        tocLinks.forEach(function(link) {
+            link.classList.remove('active');
+        });
+
+        // Add active class to the clicked table of contents link
+        var activeLink = document.querySelector('.gitbook-toc a[href="#' + sectionId + '"]');
+        activeLink.classList.add('active');
+    }
+
+    // Function to initialize the gitbook with the first chapter displayed
+    function initializeGitbook() {
+        var firstSectionId = 'chapter1'; // Set the id of the first chapter
+        toggleSection(firstSectionId); // Toggle visibility of the first chapter
+    }
+
+    // Add event listeners to table of contents links to toggle sections
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize the gitbook with the first chapter displayed
+        initializeGitbook();
+
+        var tocLinks = document.querySelectorAll('.gitbook-toc a');
+        tocLinks.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent default link behavior
+                var sectionId = link.getAttribute('href').substr(1); // Get section id from href attribute
+                toggleSection(sectionId); // Toggle section visibility
+            });
+        });
+    });
+
+
+
+
+
+
+
+    // Get the current full URL with parameters
+    var fullURL = window.location.href;
+
+    // Save the full URL to localStorage
+    localStorage.setItem('fullURL', fullURL);
+
+    // Display the full URL in the specified location
+    document.getElementById('url').innerText = fullURL;
+
+
+
+
+
+// Function to copy the URL to the clipboard and change button text
+function copyURL() {
+    var urlElement = document.getElementById('encrplinkValue2');
+    var range = document.createRange();
+    range.selectNode(urlElement);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    document.execCommand('copy');
+    window.getSelection().removeAllRanges();
+    var copyButton = document.getElementById('copyButton');
+    copyButton.innerText = 'Kopiert!';
+    setTimeout(function() {
+        copyButton.innerText = 'Link kopieren';
+    }, 3000); // Revert button text after 3 seconds (3000 milliseconds)
+}
+
+
+
+    </script>
+</body>
+</html>
