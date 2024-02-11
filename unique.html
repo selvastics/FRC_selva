@@ -128,8 +128,63 @@
 
 
 <script>
+
+
+
+
+
+
+
+
+
     // Assuming the URL is https://example.com?Coping=4.444&Resilienz=3.606
-    const urlParams = new URLSearchParams(window.location.search);
+
+
+
+
+
+// Function to decrypt the encrypted parameters using base64
+//function decryptURLParameters(encryptedString) {
+//    var decryptedParameters = atob(encryptedString);
+//    return decryptedParameters;
+//}
+
+// Example usage
+//var encryptedString = "aWQ9aWRfbjZiOXpjdmRjJkNvcGluZz00LjQ0NDQ0NDQ0NDQ0NDQmUmVzaWxpZW56PTMuNjA2MDYwNjA2MDYwNiZOZXVyb3RpemlzbXVzPTMuMzMzMzMzMzMzMzMzMyZFeHRyYXZlcnNpb249My4zMzMzMzMzMzMzMzMzJk9mZmVuaGVpdD0yLjgzMzMzMzMzMzMzMzMmVmVydHJhZWdsaWNoa2VpdD0yLjMzMzMzMzMzMzMzMzMmR2V3aXNzZW5oYWZ0aWdrZWl0PTMuNjY2NjY2NjY2NjY2NyZBY2h0c2Fta2VpdD0wLjUmTGViZW5zenVmcmllZGVuaGVpdD0wLjUmUHJva2FzdGluYXRpb249MC41JlNlbGJzdHdpcmtzYW1rZWl0PTAuNSZQb2xpdGlzY2hlU2VsYnN0d2lya3NhbWtlaXQ9MC41JkJlcnVmc1VuZE9yZ2FuaXNhdGlvbnNrbGltYT0wLjU";
+//var decryptedString = decryptURLParameters(encryptedParameters);
+
+//alert("Oriteteginal URL:\n"+ encryptedString);
+
+
+
+
+//var parameters = "id=id_n6b9czdc&Copying=4.4444444444444&Resilienz=3.6060606060606&Neurotizismus=3.3333333333333&Extraversion=3.3333333333332&Gewissenhaftigkeit=3.333333333332&Psychastenie=2.8333333333332&ExtraversionSkala=2.8333333333322&GewissensSkala=3.6666666666667&Pokastinat=0.5&Lebenszufriedenheit=0.5&ProkastinierenSkala=0.5&BerufsUnzufriedenheitSkala=0.5&LebenszufriedenheitSkala=0.5";
+//var encryptedString = encryptURLParameters(parameters);
+//var decryptedString = decryptURLParameters(encryptedString);
+
+var url = window.location.href;
+var urlParams;
+
+if (!url.includes("Coping") || !url.includes("Neurotizismus")) {
+    var encryptedPart = url.substring(url.indexOf('unique.html?id=') + 'unique.html?id='.length);
+    var decryptedPart = decodeURIComponent(escape(window.atob(encryptedPart)));
+    var decryptedURL = url.substring(0, url.indexOf('unique.html?id=')) + 'unique.html?id=' + decryptedPart;
+    urlParams = new URLSearchParams(new URL(decryptedURL).search);
+} else {
+    urlParams = new URLSearchParams(window.location.search);
+}
+
+function encryptURLParameters(parameters) {
+    var encryptedString = window.btoa(parameters);
+    return encryptedString;
+}
+
+function decryptURLParameters(encryptedString) {
+    var decryptedParameters = atob(decodeURIComponent(encryptedString));
+    return decryptedParameters;
+}
+
+
 
     const coping = Number(urlParams.get('Coping'));
     const resilienz = Number(urlParams.get('Resilienz'));
@@ -191,6 +246,45 @@
 
         
 
+
+        
+// Get the current URL with parameters
+var currentURLWithParameters = window.location.href;
+
+// Check if the URL is not encrypted
+if (!currentURLWithParameters.includes("unique.html?id=")) {
+    // Function to encrypt URL parameters
+    function encryptURLParameters(parameters) {
+        var encryptedString = btoa(parameters);
+        return encryptedString;
+    }
+
+    // Find the index of "unique.html?id=" in the URL
+    var uniqueIdIndex = currentURLWithParameters.indexOf('unique.html?id=');
+    
+    // Extract the unencrypted part of the URL
+    var unencryptedPart = currentURLWithParameters.substring(0, uniqueIdIndex + 'unique.html?id='.length);
+    
+    // Encrypt only the parameters part of the URL
+    var encryptedParameters = encryptURLParameters(currentURLWithParameters);
+    
+    // Store the encrypted URL in local storage
+    localStorage.setItem('encrplink', unencryptedPart + encryptedParameters);
+} else {
+    // If the URL is already encrypted, store it directly in local storage
+    localStorage.setItem('encrplink', currentURLWithParameters);
+}
+
+window.onload = function() {
+    // Retrieve encrplinkValue from localStorage
+    var encrplinkValue = localStorage.getItem('encrplink');
+    
+    // Update the content of the h8 element with the retrieved encrplinkValue
+    document.getElementById("encrplinkValue2").textContent = encrplinkValue;
+};
+
+
+
 </script>
 
 
@@ -220,8 +314,8 @@
         <div class="text-center">
             <h2>Willkommen! Diese Seite ist speziell für Sie eingerichtet</h2>
             <h3>Ihre individueller Link lautet:</h3>
-            <h8 style="color: darkred;" id="storedId"></h8>
-            <button onclick="copyURL()" id="copyButton" style="font-weight: bold; background-color: #3b3c3b; color: white; padding: 8px 15px; border: none; border-radius: 3px; cursor: pointer;">ID kopieren</button>
+            <pre style="color: darkred;" id="encrplinkValue2"></pre>
+            <button onclick="copyURL()" id="copyButton" style="font-weight: bold; background-color: #3b3c3b; color: white; padding: 8px 15px; border: none; border-radius: 3px; cursor: pointer;">Link kopieren</button>
         </div>
         <div class="container">
             <h2 style="color: white;"></h2>
@@ -999,7 +1093,7 @@
 
 // Function to copy the URL to the clipboard and change button text
 function copyURL() {
-    var urlElement = document.getElementById('storedId');
+    var urlElement = document.getElementById('encrplinkValue2');
     var range = document.createRange();
     range.selectNode(urlElement);
     window.getSelection().removeAllRanges();
@@ -1009,7 +1103,7 @@ function copyURL() {
     var copyButton = document.getElementById('copyButton');
     copyButton.innerText = 'Kopiert!';
     setTimeout(function() {
-        copyButton.innerText = 'ID kopieren';
+        copyButton.innerText = 'Link kopieren';
     }, 3000); // Revert button text after 3 seconds (3000 milliseconds)
 }
 
