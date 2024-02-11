@@ -902,47 +902,34 @@
 
 
 
-    // Get the current full URL with parameters
-    var fullURL = window.location.href;
 
-    // Save the full URL to localStorage
-    localStorage.setItem('fullURL', fullURL);
-
-    // Display the full URL in the specified location
-    document.getElementById('url').innerText = fullURL;
+// Parse URL parameters
+var urlParams = new URLSearchParams(window.location.search);
 
 // Get individual parameters
-var id = urlParams.get('id');
-var coping = urlParams.get('Coping');
-var resilienz = urlParams.get('Resilienz');
-var neurotizismus = urlParams.get('Neurotizismus');
-var extraversion = urlParams.get('Extraversion');
-var offenheit = urlParams.get('Offenheit');
-var vertraeglichkeit = urlParams.get('Vertraeglichkeit');
-var gewissenhaftigkeit = urlParams.get('Gewissenhaftigkeit');
-var achtsamkeit = urlParams.get('Achtsamkeit');
-var lebenszufriedenheit = urlParams.get('Lebenszufriedenheit');
-var prokastination = urlParams.get('Prokastination');
-var selbstwirksamkeit = urlParams.get('Selbstwirksamkeit');
-var politischeSelbstwirksamkeit = urlParams.get('PolitischeSelbstwirksamkeit');
-var berufsUndOrganisationsklima = urlParams.get('BerufsUndOrganisationsklima');
+var coping = parseFloat(urlParams.get('Coping'));
+var resilienz = parseFloat(urlParams.get('Resilienz'));
 
-
+// Check if values are valid numbers
+if (isNaN(coping) || isNaN(resilienz)) {
+    console.error('Invalid values for coping or resilienz.');
+} else {
     // Set values to localStorage
     localStorage.setItem('coping', coping);
-localStorage.setItem('resilienz', resilienz);
+    localStorage.setItem('resilienz', resilienz);
 
-// Log the values after setting them
-console.log('coping value:', coping);
-console.log('resilienz value:', resilienz);
+    // Log the values after setting them
+    console.log('coping value:', coping);
+    console.log('resilienz value:', resilienz);
 
-// Retrieve values from localStorage
-var storedCoping = localStorage.getItem('coping');
-var storedResilienz = localStorage.getItem('resilienz');
+    // Retrieve values from localStorage
+    var storedCoping = localStorage.getItem('coping');
+    var storedResilienz = localStorage.getItem('resilienz');
 
-// Log the retrieved values
-console.log('Stored coping value:', storedCoping);
-console.log('Stored resilienz value:', storedResilienz);
+    // Log the retrieved values
+    console.log('Stored coping value:', storedCoping);
+    console.log('Stored resilienz value:', storedResilienz);
+}
 
 
 
