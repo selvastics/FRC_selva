@@ -200,23 +200,6 @@ function decryptURLParameters(encryptedString) {
     const politischeSelbstwirksamkeit = Number(urlParams.get('PolitischeSelbstwirksamkeit'));
     const berufsUndOrganisationsklima = Number(urlParams.get('BerufsUndOrganisationsklima'));
 
-    const AktivesCoping = Number(urlParams.get('AktivesCoping'));
-    const Akzeptanz = Number(urlParams.get('Akzeptanz'));
-    const FamiliarerZusammenhalt = Number(urlParams.get('FamiliarerZusammenhalt'));
-    const Humor = Number(urlParams.get('Humor'));
-    const InstrumentelleUnterstuetzung = Number(urlParams.get('InstrumentelleUnterstuetzung'));
-    const Optimismus = Number(urlParams.get('Optimismus'));
-    const positivesDenken = Number(urlParams.get('positivesDenken'));
-    const Religion = Number(urlParams.get('Religion'));
-    const Selbstwahrnehmung = Number(urlParams.get('Selbstwahrnehmung'));
-    const SinnZweck = Number(urlParams.get('SinnZweck'));
-    const Sozialeuntestuetzung = Number(urlParams.get('Sozialeuntestuetzung'));
-    const keinSubstanzenmissbrauch = Number(urlParams.get('keinSubstanzenmissbrauch'));
-    const UmgangmitAngst = Number(urlParams.get('UmgangmitAngst'));
-    const keinWunschdenken = Number(urlParams.get('keinWunschdenken'));
-    const Zukunftsplanung = Number(urlParams.get('Zukunftsplanung'));
-
-
 
     // Store parameters in localStorage
     localStorage.setItem('coping', coping);
@@ -233,24 +216,6 @@ function decryptURLParameters(encryptedString) {
     localStorage.setItem('politischeSelbstwirksamkeit', politischeSelbstwirksamkeit);
     localStorage.setItem('berufsUndOrganisationsklima', berufsUndOrganisationsklima);
 
-    // Store parameters in localStorage
-    localStorage.setItem('AktivesCoping', AktivesCoping);
-    localStorage.setItem('Akzeptanz', Akzeptanz);
-    localStorage.setItem('FamiliarerZusammenhalt', FamiliarerZusammenhalt);
-    localStorage.setItem('Humor', Humor);
-    localStorage.setItem('InstrumentelleUnterstuetzung', InstrumentelleUnterstuetzung);
-    localStorage.setItem('Optimismus', Optimismus);
-    localStorage.setItem('positivesDenken', positivesDenken);
-    localStorage.setItem('Religion', Religion);
-    localStorage.setItem('Selbstwahrnehmung', Selbstwahrnehmung);
-    localStorage.setItem('SinnZweck', SinnZweck);
-    localStorage.setItem('Sozialeuntestuetzung', Sozialeuntestuetzung);
-    localStorage.setItem('keinSubstanzenmissbrauch', keinSubstanzenmissbrauch);
-    localStorage.setItem('UmgangmitAngst', UmgangmitAngst);
-    localStorage.setItem('keinWunschdenken', keinWunschdenken);
-    localStorage.setItem('Zukunftsplanung', Zukunftsplanung);
-
-
     // Retrieve parameters from localStorage
     const copingValue = Number(localStorage.getItem('coping'));
     const resilienzValue = Number(localStorage.getItem('resilienz'));
@@ -265,27 +230,6 @@ function decryptURLParameters(encryptedString) {
     const storedSelbstwirksamkeit = Number(localStorage.getItem('selbstwirksamkeit'));
     const storedPolitischeSelbstwirksamkeit = Number(localStorage.getItem('politischeSelbstwirksamkeit'));
     const storedBerufsUndOrganisationsklima = Number(localStorage.getItem('berufsUndOrganisationsklima'));
-
-    // Retrieve parameters from localStorage
-    const storedAktivesCoping = Number(localStorage.getItem('AktivesCoping'));
-    const storedAkzeptanz = Number(localStorage.getItem('Akzeptanz'));
-    const storedFamiliarerZusammenhalt = Number(localStorage.getItem('FamiliarerZusammenhalt'));
-    const storedHumor = Number(localStorage.getItem('Humor'));
-    const storedInstrumentelleUnterstuetzung = Number(localStorage.getItem('InstrumentelleUnterstuetzung'));
-    const storedOptimismus = Number(localStorage.getItem('Optimismus'));
-    const storedPositivesDenken = Number(localStorage.getItem('positivesDenken'));
-    const storedReligion = Number(localStorage.getItem('Religion'));
-    const storedSelbstwahrnehmung = Number(localStorage.getItem('Selbstwahrnehmung'));
-    const storedSinnZweck = Number(localStorage.getItem('SinnZweck'));
-    const storedSozialeuntestuetzung = Number(localStorage.getItem('Sozialeuntestuetzung'));
-    const storedKeinSubstanzenmissbrauch = Number(localStorage.getItem('keinSubstanzenmissbrauch'));
-    const storedUmgangmitAngst = Number(localStorage.getItem('UmgangmitAngst'));
-    const storedKeinWunschdenken = Number(localStorage.getItem('keinWunschdenken'));
-    const storedZukunftsplanung = Number(localStorage.getItem('Zukunftsplanung'));
-
-
-
-
 
 
     window.onload = function() {
@@ -621,23 +565,21 @@ window.onload = function() {
                               datasets: [{
                                 // Real data
                                 data: [
-                                storedAktivesCoping, 
-                                storedAkzeptanz,
-                                storedFamiliarerZusammenhalt,
-                                storedHumor,
-                                storedInstrumentelleUnterstuetzung,
-                                storedOptimismus,
-                                storedPositivesDenken,
-                                storedReligion,
-                                storedSelbstwahrnehmung,
-                                storedSinnZweck,
-                                storedSozialeuntestuetzung,
-                                storedKeinSubstanzenmissbrauch,
-                                storedUmgangmitAngst,
-                                storedKeinWunschdenken,
-                                storedZukunftsplanung,
-
-
+                                  '%AktivesCoping%', 
+                                  '%Akzeptanz%', 
+                                  '%FamiliarerZusammenhalt%', 
+                                  '%Humor%', 
+                                  '%InstrumentelleUnterstuetzung%', 
+                                  '%Optimismus%', 
+                                  '%positivesDenken%', 
+                                  '%Religion%', 
+                                  '%Selbstwahrnehmung%', 
+                                  '%SinnZweck%', 
+                                  '%Sozialeuntestuetzung%', 
+                                  '%keinSubstanzenmissbrauch%', 
+                                  '%UmgangmitAngst%', 
+                                  '%keinWunschdenken%', 
+                                  '%Zukunftsplanung%'
                                 ],
                                 fill: true,
                                 backgroundColor: [
