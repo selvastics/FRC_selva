@@ -244,34 +244,29 @@ function decryptURLParameters(encryptedString) {
         };
 
 
-        
 
+        function encryptURLParameters(parameters) {
+    var encryptedString = btoa(parameters);
+    return encryptedString;
+}
 
-        
 // Get the current URL with parameters
 var currentURLWithParameters = window.location.href;
 
-// Check if the URL is not encrypted
-if (!currentURLWithParameters.includes("unique.html?id=")) {
-    // Function to encrypt URL parameters
-    function encryptURLParameters(parameters) {
-        var encryptedString = btoa(parameters);
-        return encryptedString;
-    }
+// Find the index of "unique.html?id=" in the URL
+var uniqueIdIndex = currentURLWithParameters.indexOf('unique.html?id=');
 
-    // Find the index of "unique.html?id=" in the URL
-    var uniqueIdIndex = currentURLWithParameters.indexOf('unique.html?id=');
-    
-    // Extract the unencrypted part of the URL
-    var unencryptedPart = currentURLWithParameters.substring(0, uniqueIdIndex + 'unique.html?id='.length);
-    
+// Extract the unencrypted part of the URL
+var unencryptedPart = currentURLWithParameters.substring(0, uniqueIdIndex + 'unique.html?id='.length);
+
+// Check if the URL includes specific parameters
+if (currentURLWithParameters.includes("Coping") && currentURLWithParameters.includes("Neurotizismus")) {
     // Encrypt only the parameters part of the URL
     var encryptedParameters = encryptURLParameters(currentURLWithParameters);
-    
-    // Store the encrypted URL in local storage
+
     localStorage.setItem('encrplink', unencryptedPart + encryptedParameters);
 } else {
-    // If the URL is already encrypted, store it directly in local storage
+    // If specific parameters are not present, store the URL as is
     localStorage.setItem('encrplink', currentURLWithParameters);
 }
 
